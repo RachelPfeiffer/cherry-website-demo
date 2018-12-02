@@ -1,0 +1,40 @@
+header {
+  background-color: black;
+  }
+
+#search-box {
+  background-color: white;
+  opacity: 0.7;
+  }
+
+#search-button {
+  cursor: pointer;
+}
+
+#leave-search {
+  transition: transform 0.3s;
+  width: 100%;
+  text-align: right;
+}
+
+#leave-search:hover {
+  transform: rotate(90deg);
+}
+
+#search-input {
+}
+
+#results-display {}
+
+nav {
+  color: white;
+  list-style-type: none;
+  background-image: url('img/bigspoon.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#contact-methods {
+  display: flex;
+  flex-wrap: wrap;
+}

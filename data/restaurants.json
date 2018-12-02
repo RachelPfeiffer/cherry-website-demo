@@ -1,0 +1,32 @@
+{
+  "restaurants": [{
+    "id": 1,
+    "name": "Baked Ziti",
+    "photograph": "1.jpg",
+    "cuisine_type": "Lunch",
+    "ingredients": [
+      "1 pound raw ziti",
+      "16 ounces spaghetti sauce",
+      "1 cup cottage cheese (5% fat)",
+      "16 ounces lukewarm water",
+      "16 ounces milk"
+      "1/2 cup mozzarella cheese"
+    ],
+    "directions": "Mix spaghetti sauce, water, milk, and cottage cheese in a large
+    mixing bowl. Mix in raw ziti. Pour into a large casserole and bake, covered,
+    at 400 degrees C. Uncover and top with mozzerella. Bake for 5 more minutes,
+    uncovered. Yummy!"
+  },
+  {
+    "id": 2,
+    "name": "Cornflakes",
+    "photograph": "2.jpg",
+    "cuisine_type": "Breakfast",
+    "ingredients": [
+      "1 cup cornflakes",
+      "1 cup milk"
+    ],
+    "directions": "Pour the cornflakes into a big cereal bowl. Pour the milk on
+    top. Yummy!"
+  }
+}
