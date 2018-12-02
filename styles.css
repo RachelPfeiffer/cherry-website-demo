@@ -1,11 +1,55 @@
 header {
-  background-color: black;
+  background-color: #1C1D1E;
+  height: 70px;
+  display: flex;
+  flex-wrap: wrap;
   }
+
+.fa-search {
+  color: #ffffff;
+  display: block;
+  width: 9%;
+  text-align: center;
+  margin: auto;
+}
+
+.fa-search:hover {
+  cursor: pointer;
+}
+
+.main-logo {
+  display: block;
+  width: 80%;
+  margin-top:0.1em;
+  font-size: 3em;
+  font-weight: lighter;
+  font-family: georgia times new roman;
+  color: #EAEAEA;
+  text-align: center;
+}
+
+.main-logo:hover {
+  cursor: pointer;
+}
+
+.fa-bars {
+  color: #ffffff;
+  display: inline-block;
+  width: 9%;
+  text-align: center;
+  margin: auto;
+}
+
+.fa-bars:hover {
+  cursor: pointer;
+}
 
 #search-box {
   background-color: white;
   opacity: 0.7;
-  }
+  position: absolute;
+  right: -100%;
+};
 
 #search-button {
   cursor: pointer;
