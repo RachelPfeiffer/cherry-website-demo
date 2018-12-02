@@ -7,7 +7,7 @@ header {
 
 .fa-search {
   color: #ffffff;
-  display: block;
+  display: inline-block;
   width: 9%;
   text-align: center;
   margin: auto;
@@ -17,31 +17,120 @@ header {
   cursor: pointer;
 }
 
+.main-title {
+  width: 80%;
+}
 .main-logo {
   display: block;
-  width: 80%;
+  width: 60%;
   margin-top:0.1em;
   font-size: 3em;
   font-weight: lighter;
   font-family: georgia times new roman;
   color: #EAEAEA;
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .main-logo:hover {
   cursor: pointer;
 }
 
+.slogan {
+  display: none;
+}
+
 .fa-bars {
   color: #ffffff;
   display: inline-block;
-  width: 9%;
-  text-align: center;
+  width: 10%;
+  text-align: left;
   margin: auto;
 }
 
-.fa-bars:hover {
+.fa-bars:hover, .fa-fire {
   cursor: pointer;
+}
+
+.header-social-media {
+  display: none;
+}
+
+.header-search-trending {
+  width: 10%;
+  margin: auto;
+  text-align: right;
+}
+
+.fa-fire {
+  opacity: 0;
+}
+
+@media only screen and (min-width: 750px) {
+  header {
+    height: 180px;
+    background-color: #0A0A0A;
+  }
+
+  .header-social-media, .header-search-trending {
+    display: inline-block;
+    color: #E8E8E8;
+  }
+
+  .header-social-media{
+    color: #ffffff;
+    width: 9%;
+    text-align: center;
+    margin: auto;
+    order: -1;
+  }
+
+  .main-title {
+    width: 65%;
+  }
+
+  .main-logo {
+    margin-bottom: -0.6em;
+    padding-bottom: 0.5em;
+    padding-top: 0.35em;
+    font-size: 5em;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .slogan {
+    color: #93949B;
+    text-align: center;
+    display: block;
+    letter-spacing: 1.5px;
+    font-size: 1.2em;
+    font-family: serif;
+  }
+
+  .header-search-trending {
+    order: 3;
+  }
+
+  .header-search-trending:hover, .header-social-media:hover, .slogan:hover {
+    cursor: pointer;
+  }
+
+  .fa-fire, .fa-instagram {
+    color: #ffffff;
+    opacity: 1;
+    margin-left: 1em;
+  }
+
+  .fa-bars {
+    position: absolute;
+    right: -1000%;
+  }
+
+  .fa-search {
+    margin-right: 0.3em;
+  }
 }
 
 #search-box {
