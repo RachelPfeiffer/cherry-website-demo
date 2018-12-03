@@ -6,6 +6,9 @@ header {
 
   }
 
+ul {
+  list-style: none;
+}
 
 /*--------------Black Header---------------------------*/
 .black-header {
@@ -63,7 +66,8 @@ header {
 }
 
 .main-logo:hover, .fa-search:hover, .fa-bars:hover, .fa-fire:hover, .slogan:hover,
-.fa-instagram:hover, .fa-twitter:hover {
+.fa-instagram:hover, .fa-twitter:hover, .nav-sections li:hover, .fa-facebook-f:hover,
+.fa-youtube-square:hover {
   cursor: pointer;
 }
 
@@ -97,52 +101,118 @@ header {
   display: block;
   width: 100vw;
   height: 100vh;
-  opacity: 0.7;
-  background-color: white;
+  background-color: rgb(255,255,255,0.9);
   z-index: 5;
   position: absolute;
   top: 0;
   left: 0;
 }
 .fa-times {
-  transition: 0.5s;
-  position: absolute;
-  top: 20px;
-  right: 20px;
+transition: 0.5s;
+margin-right: 50px;
+margin-top: 50px;
+float: right;
+text-align: right;
+width: 45px;
+height: 45px;
+font-size: 45px;
+transform-origin: center, center;
 }
+
+.fa-times.in {
+}
+
 .fa-times:hover {
   transform: rotate(90deg);
 }
 
 .search-input {
   display: block;
-  margin-top: 45%;
+  margin-top: 65%;
   margin-left: auto;
   margin-right: auto;
   border-top: none;
   border-right: none;
   border-left: none;
-  border-bottom: 2px grey solid;
+  border-bottom: 1px grey solid;
   width: 40%;
+  text-align: center;
+  background-color: rgb(255,255,255,0);
+  height: 3.2em;
+}
+
+.search-input::placeholder {
+  font-family: georgia times new roman;
+  color:black;
+  font-size: 3em;
 }
 
 #results-display {
   margin-left: 30%;
   margin-right: 30%;
   text-align: center;
+  color: grey;
 }
 
+/*----------------------------- nav menu -----------------------------------*/
 nav {
   color: white;
   list-style-type: none;
   background-image: url('img/bigspoon.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+  width: 88vw;
+  position: relative;
+  right: -150%;
+  transition: 0.5s ease;
+  margin-top: -70px;
 }
 
+nav.in {
+  transform: translateX(-150%);
+}
+
+.black-header.out {
+  transform: translateX(-86%);
+}
+
+.main-logo.nav {
+  margin-top: 0;
+  padding-bottom: 1em;
+  padding-top: 0.5em;
+}
+
+.nav-sections {
+  margin-top: 30%;
+  margin-bottom: 30%;
+  margin-left: -5%;
+  font-size: 1.8em;
+  text-align: center;
+}
+
+.nav-sections li {
+  margin-top: 0.5em;
+}
+
+ {
+  cursor: pointer;
+}
+
+#contact-bar {
+  height: 30%;
+}
 #contact-methods {
   display: flex;
   flex-wrap: wrap;
+  margin: 3%;
+  width: 90vw;
+}
+
+#contact-methods li {
+  width: 10vw;
+  height: 10vw;
+  margin: 4vw;
+  font-size: 1.3em;
 }
 
 @media only screen and (min-width: 750px) {
