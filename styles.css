@@ -1,9 +1,22 @@
+html {
+  overflow: hidden;
+}
+
 header {
+
+  }
+
+
+/*--------------Black Header---------------------------*/
+.black-header {
+  width: 100%;
   background-color: #1C1D1E;
   height: 70px;
   display: flex;
   flex-wrap: wrap;
-  }
+}
+
+/*-------------Header icons-------------------------*/
 
 .fa-search {
   color: #ffffff;
@@ -13,7 +26,7 @@ header {
   margin: auto;
 }
 
-.fa-search:hover {
+ {
   cursor: pointer;
 }
 
@@ -33,7 +46,7 @@ header {
   margin-right: auto;
 }
 
-.main-logo:hover {
+{
   cursor: pointer;
 }
 
@@ -47,10 +60,10 @@ header {
   width: 10%;
   text-align: left;
   margin: auto;
-  text-decoration: none;
 }
 
-.fa-bars:hover, .fa-fire {
+.main-logo:hover, .fa-search:hover, .fa-bars:hover, .fa-fire:hover, .slogan:hover,
+.fa-instagram:hover, .fa-twitter:hover {
   cursor: pointer;
 }
 
@@ -69,9 +82,71 @@ header {
 }
 
 
+#search-button {
+  cursor: pointer;
+}
+/*-------Search window------------------*/
+#search-box {
+  transition: 0.5s ease-in;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+#search-box.in {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.7;
+  background-color: white;
+  z-index: 5;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.fa-times {
+  transition: 0.5s;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.fa-times:hover {
+  transform: rotate(90deg);
+}
+
+.search-input {
+  display: block;
+  margin-top: 45%;
+  margin-left: auto;
+  margin-right: auto;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 2px grey solid;
+  width: 40%;
+}
+
+#results-display {
+  margin-left: 30%;
+  margin-right: 30%;
+  text-align: center;
+}
+
+nav {
+  color: white;
+  list-style-type: none;
+  background-image: url('img/bigspoon.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#contact-methods {
+  display: flex;
+  flex-wrap: wrap;
+}
 
 @media only screen and (min-width: 750px) {
-  header {
+  .black-header {
     height: 180px;
     background-color: #0A0A0A;
   }
@@ -116,10 +191,6 @@ header {
     order: 3;
   }
 
-  .header-search-trending:hover, .header-social-media:hover, .slogan:hover {
-    cursor: pointer;
-  }
-
   .fa-fire, .fa-instagram {
     color: #ffffff;
     opacity: 1;
@@ -134,33 +205,4 @@ header {
   .fa-search {
     margin-right: 0.3em;
   }
-}
-
-#search-box {
-  background-color: blue;
-  transition: 0.5s;
-  position: absolute;
-  left: -100%;
-  height: 100%;
-  width: 100%;
-  z-index: 5;
-}
-
-#search-box.in {
-  position: absolute;
-  left: 0;
-}
-
-.fa-times {
-  color: #fff;
-transition: 0.3s;
-display: block;
-height: 1em;
-width: 1em;
-font-size: 1em;
-}
-
-.fa-times:hover {
-  transform: rotate(90deg);
-  cursor: pointer;
 }

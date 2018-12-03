@@ -1,7 +1,7 @@
 //open the searchbox when you click the magnifying glass
-const hamburger = document.querySelector('.header-search-trending');
+const magnifyer = document.querySelector('.header-search-trending');
 const searchWindow = document.querySelector('#search-box');
-hamburger.addEventListener('click', function () {
+magnifyer.addEventListener('click', function () {
   searchWindow.classList.add('in');
 });
 
