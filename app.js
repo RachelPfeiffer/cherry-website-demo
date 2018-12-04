@@ -34,27 +34,12 @@ hamburgur.addEventListener('click', function () {
 })
 
 //parse the json info
-function loadJSON(callback) {
-  var xobj = new XMLHttpRequest();
-  xobj.overrideMimeType("application/json");
-  xobj.open('GET', '/data/recipes.json', true);
-  xobj.onreadystatechange = function () {
-    if (xobj.readyState == 4 && xobj.status == "200") {
-      callback(JSON.parse(xobj.responseText));
-    }
-  };
-  xobj.send(null);
+fetch('/data/recipes.json').then(function (response) {
+return response.json();
+}).then(addStuff);
+
+//log out the name of each recipe - let's replace this with
+//all our filling functions.
+function addStuff(stuff) {
+  console.log(stuff.recipes[0].name);
 }
-
-var body = document.querySelector('body');
-console.log(body);
-//
-
-//creates a recipe square on the home screen for each recipe
-loadJSON(function(json) {
-  json.recipes.forEach(function (recipe) {
-    const newRecipeBox = document.createElement('div');
-    newRecipeBox.classList = "recipe-box";
-    body.appendChild(newRecipeBox);
-  });
-});
