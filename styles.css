@@ -166,6 +166,7 @@ nav {
   right: -150%;
   transition: 0.5s ease;
   margin-top: -70px;
+  margin-bottom: -100%;
 }
 
 nav.in {
@@ -213,6 +214,13 @@ nav.in {
   height: 10vw;
   margin: 4vw;
   font-size: 1.3em;
+}
+
+/*---------------main page recipes--------------------*/
+.recipe-box {
+  width: 100vw;
+  height: 200px;
+  background-color: orange;
 }
 
 @media only screen and (min-width: 750px) {

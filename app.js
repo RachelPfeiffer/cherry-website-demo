@@ -14,7 +14,6 @@ exit.addEventListener('click', function () {
 let results = 2;
 //change the innertext of the search results to reflect number of results
 const resultOutput = document.querySelector('#results-display');
-console.log(resultOutput.textContent);
 function updateResultOutput() {
   if (results===0) {
     resultOutput.innerHTML = '<a href="features">Featured</a>'
@@ -33,3 +32,29 @@ hamburgur.addEventListener('click', function () {
   navMenu.classList.toggle('in');
   blackHead.classList.toggle('out');
 })
+
+//parse the json info
+function loadJSON(callback) {
+  var xobj = new XMLHttpRequest();
+  xobj.overrideMimeType("application/json");
+  xobj.open('GET', '/data/recipes.json', true);
+  xobj.onreadystatechange = function () {
+    if (xobj.readyState == 4 && xobj.status == "200") {
+      callback(JSON.parse(xobj.responseText));
+    }
+  };
+  xobj.send(null);
+}
+
+var body = document.querySelector('body');
+console.log(body);
+//
+
+//creates a recipe square on the home screen for each recipe
+loadJSON(function(json) {
+  json.recipes.forEach(function (recipe) {
+    const newRecipeBox = document.createElement('div');
+    newRecipeBox.classList = "recipe-box";
+    body.appendChild(newRecipeBox);
+  });
+});
