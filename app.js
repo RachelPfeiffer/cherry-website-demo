@@ -46,15 +46,32 @@ return response.json();
 //log out the name of each recipe - let's replace this with
 //all our filling functions.
 function fillMainPage(stuff) {
+  //create Recipe Section with recipes
   const recipeSection = document.createElement('div');
   recipeSection.classList = 'recipe-section main-page';
-  recipeSection.innerText = "Here's the new recipe section!";
   body.appendChild(recipeSection);
   for (recipe of stuff.recipes) {
     const recipeTile = document.createElement('div');
     recipeTile.classList = "recipe-tile";
     recipeTile.innerHTML = '<div class="image-box"><img class="recipe-image" src="img/' + recipe.id + '.jpg" alt="' + recipe.name + '"></div><div class="recipe-genre">'+recipe.genre+'</div><div class="recipe-name">'+recipe.name+'</div>';
     recipeSection.appendChild(recipeTile);
-    console.log(recipe.name);
+  }
+  //create the Trending box
+  const trendingSection = document.createElement('div');
+  trendingSection.classList = 'trending-section main-page';
+  trendingSection.innerText = 'Trending'
+  body.appendChild(trendingSection);
+  for (recipe of stuff.recipes) {
+    if(recipe.trending) {
+      const trendingRecipe = document.createElement('div');
+      trendingRecipe.innerText = recipe.name;
+      const trendingRecipePic = document.createElement('img');
+      trendingRecipePic.src = 'img/'+recipe.id+'.jpg';
+      trendingRecipe.appendChild(trendingRecipePic);
+      trendingRecipePic.classList = 'recipe-name';
+      trendingSection.appendChild(trendingRecipe);
+    };
   }
 }
+
+const trending = ['6', '7', '8', '9', '10'];

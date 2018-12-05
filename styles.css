@@ -220,6 +220,7 @@ nav.in {
 /*---------------main page recipes--------------------*/
 .recipe-section.main-page {
   width: 100vw;
+  margin: auto;
 }
 /*don't let the picture overflow its container even when it's zoomed*/
 .image-box {
@@ -238,14 +239,25 @@ nav.in {
 .recipe-genre {
   color: #9E9E9E;
   font-size: 0.8em;
+  font-style: italic;
   font-family: sans-serif;
+  line-height: 3em;
 }
 
 .recipe-name {
-  font-size: 2em;
+  font-size: 1.8em;
   font-family: georgia times new roman;
+  font-style: italic;
+  height: 2em;
+  margin-top: 0;
 }
 
+/*---------------trending section-------------------*/
+.trending-section.main-page {
+  background-color: #F2F2F2;
+  text-align: center;
+  font-size: 1.4em;
+}
 @media only screen and (min-width: 750px) {
   .black-header {
     height: 180px;
