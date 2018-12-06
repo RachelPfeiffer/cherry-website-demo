@@ -2,32 +2,32 @@
   {
     "recipes" : [{
     "id" : "2",
-    "name" : "Baked Ziti",
+    "name" : "Cooked Baked Fried Ziti",
     "genre" : "Lunch",
     "trending" : false
   }, {
     "id" : "3",
-    "name" : "Cornflakes",
+    "name" : "Cornflakes & Milk Medley",
     "genre" : "Lunch",
     "trending" : true
   }, {
     "id" : "4",
-    "name" : "Chicken",
+    "name" : "Kickin' Chicken with Spices",
     "genre" : "Dinner",
     "trending" : false
   }, {
     "id" : "5",
-    "name" : "Rice",
+    "name" : "Rice a la Water",
     "genre" : "Dinner",
     "trending" : true
   }, {
     "id" : "6",
-    "name" : "Brownies",
+    "name" : "Chocolate Chocolate Brownie Cake",
     "genre" : "Baking",
     "trending" : true
   }, {
     "id" : "7",
-    "name" : "Bread",
+    "name" : "Hearth Bread",
     "genre" : "Baking",
     "trending" : true
   }]

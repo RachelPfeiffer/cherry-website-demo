@@ -143,7 +143,7 @@ transform-origin: center, center;
 }
 
 .search-input::placeholder {
-  font-family: georgia times new roman;
+  font-family: "playfair display", sans-serif;
   color:black;
   font-size: 3em;
 }
@@ -239,17 +239,16 @@ nav.in {
 .recipe-genre {
   color: #9E9E9E;
   font-size: 0.8em;
-  font-style: italic;
   font-family: sans-serif;
   line-height: 3em;
 }
 
 .recipe-name {
   font-size: 1.8em;
-  font-family: georgia times new roman;
-  font-style: italic;
-  height: 2em;
+  font-family: "playfair display", sans-serif;
+  min-height: 2em;
   margin-top: 0;
+  margin-bottom: 1em;
 }
 
 /*---------------trending section-------------------*/
@@ -257,6 +256,35 @@ nav.in {
   background-color: #F2F2F2;
   text-align: center;
   font-size: 1.4em;
+  margin: auto;
+  padding-top: 1em;
+}
+
+.trending-section .recipe-image {
+  border-radius: 50%;
+  width: 75px;
+  height: 75px;
+  transform: scale(0.8);
+}
+
+div.trending-recipe {
+  margin: auto;
+  padding-left: 10%;
+  display: flex;
+  height: 80px;
+}
+
+.trending-recipe-name {
+  width: auto;
+  text-align: left;
+  margin-left: 3%;
+  color: #4F4F4F;
+  font-family: "playfair display", sans-serif;
+  font-size: 0.8em;
+  line-height: 75px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space:nowrap;
 }
 @media only screen and (min-width: 750px) {
   .black-header {

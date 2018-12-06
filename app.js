@@ -64,11 +64,8 @@ function fillMainPage(stuff) {
   for (recipe of stuff.recipes) {
     if(recipe.trending) {
       const trendingRecipe = document.createElement('div');
-      trendingRecipe.innerText = recipe.name;
-      const trendingRecipePic = document.createElement('img');
-      trendingRecipePic.src = 'img/'+recipe.id+'.jpg';
-      trendingRecipe.appendChild(trendingRecipePic);
-      trendingRecipePic.classList = 'recipe-name';
+      trendingRecipe.className = "trending-recipe";
+      trendingRecipe.innerHTML = '<img class="recipe-image" src="img/' + recipe.id + '.jpg"><div class="trending-recipe-name">' +recipe.name + '</div>';
       trendingSection.appendChild(trendingRecipe);
     };
   }
