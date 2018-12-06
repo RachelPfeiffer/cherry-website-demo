@@ -286,10 +286,17 @@ div.trending-recipe {
   overflow: hidden;
   white-space:nowrap;
 }
+
+/*-----Random Recipe Section---*/
+.one-more-random-recipe {
+  padding-top: 100px;
+  text-align: center;
+}
 @media only screen and (min-width: 750px) {
   .black-header {
     height: 180px;
     background-color: #0A0A0A;
+    background-repeat: no-repeat;
   }
 
   .header-social-media, .header-search-trending {

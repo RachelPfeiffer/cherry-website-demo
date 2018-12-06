@@ -50,7 +50,8 @@ function fillMainPage(stuff) {
   const recipeSection = document.createElement('div');
   recipeSection.classList = 'recipe-section main-page';
   body.appendChild(recipeSection);
-  for (recipe of stuff.recipes) {
+  const mainRecipesToShow = stuff.recipes.slice(0,3);
+  for (recipe of mainRecipesToShow) {
     const recipeTile = document.createElement('div');
     recipeTile.classList = "recipe-tile";
     recipeTile.innerHTML = '<div class="image-box"><img class="recipe-image" src="img/' + recipe.id + '.jpg" alt="' + recipe.name + '"></div><div class="recipe-genre">'+recipe.genre+'</div><div class="recipe-name">'+recipe.name+'</div>';
@@ -69,6 +70,13 @@ function fillMainPage(stuff) {
       trendingSection.appendChild(trendingRecipe);
     };
   }
+
+  const randomSection = document.createElement('div');
+  randomSection.classList = "one-more-random-recipe";
+  body.appendChild(randomSection);
+  randomSection.innerText = stuff.recipes[6].name ;
+  randomSection.style.backgroundImage = 'url("img/'+stuff.recipes[6].id+'.jpg")';
+  randomSection.style.height = "200px";
 }
 
 const trending = ['6', '7', '8', '9', '10'];
