@@ -11,6 +11,10 @@ ul {
   list-style: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 /*--------------Black Header---------------------------*/
 .black-header {
   width: 100%;
@@ -291,6 +295,22 @@ div.trending-recipe {
 .one-more-random-recipe {
   padding-top: 100px;
   text-align: center;
+  color: white;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.one-more-random-recipe:hover {
+
+}
+
+.one-more-random-recipe h1 {
+  font-size: 1.5em;
+  font-family: "playfair display", sans-serif;
+}
+
+.one-more-random-recipe span {
+  font-family: sans-serif;
 }
 @media only screen and (min-width: 750px) {
   .black-header {

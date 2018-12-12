@@ -42,7 +42,6 @@ fetch('/data/recipes.json').then(function (response) {
 return response.json();
 }).then(fillMainPage);
 
-
 //log out the name of each recipe - let's replace this with
 //all our filling functions.
 function fillMainPage(stuff) {
@@ -52,31 +51,41 @@ function fillMainPage(stuff) {
   body.appendChild(recipeSection);
   const mainRecipesToShow = stuff.recipes.slice(0,3);
   for (recipe of mainRecipesToShow) {
-    const recipeTile = document.createElement('div');
+    const recipeTile = document.createElement('a');
+    recipeTile.href = './recipe.html?id='+recipe.id;
     recipeTile.classList = "recipe-tile";
     recipeTile.innerHTML = '<div class="image-box"><img class="recipe-image" src="img/' + recipe.id + '.jpg" alt="' + recipe.name + '"></div><div class="recipe-genre">'+recipe.genre+'</div><div class="recipe-name">'+recipe.name+'</div>';
+    const linkToRecipe = document.createElement('a');
+    linkToRecipe.innerHTML = 'View Recipe';
     recipeSection.appendChild(recipeTile);
   }
   //create the Trending box
   const trendingSection = document.createElement('div');
   trendingSection.classList = 'trending-section main-page';
-  trendingSection.innerText = 'Trending'
+  trendingSection.innerText = 'Trending';
   body.appendChild(trendingSection);
   for (recipe of stuff.recipes) {
     if(recipe.trending) {
-      const trendingRecipe = document.createElement('div');
+      const trendingRecipe = document.createElement('a');
+      trendingRecipe.href = './recipe.html?id='+recipe.id;
       trendingRecipe.className = "trending-recipe";
       trendingRecipe.innerHTML = '<img class="recipe-image" src="img/' + recipe.id + '.jpg"><div class="trending-recipe-name">' +recipe.name + '</div>';
       trendingSection.appendChild(trendingRecipe);
+      urlForRestaurant(trendingRecipe);
     };
   }
 
   const randomSection = document.createElement('div');
   randomSection.classList = "one-more-random-recipe";
   body.appendChild(randomSection);
-  randomSection.innerText = stuff.recipes[6].name ;
   randomSection.style.backgroundImage = 'url("img/'+stuff.recipes[6].id+'.jpg")';
   randomSection.style.height = "200px";
+  randomSection.innerHTML = '<span>'+stuff.recipes[6].genre+'</span><h1>'+stuff.recipes[6].name+'</h1><span>Crunchy Midday Snack</span>';
 }
 
 const trending = ['6', '7', '8', '9', '10'];
+
+//generate url for each restaurant
+function urlForRestaurant(restaurant) {
+  console.log ('./restaurant.html?id='+ restaurant.innerText);
+}
