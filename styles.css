@@ -76,6 +76,11 @@ a {
   cursor: pointer;
 }
 
+.fa-fire:hover .tooltip, .fa-twitter:hover .tooltip,
+.fa-search:hover .tooltip, .fa-instagram:hover .tooltip {
+  visibility: visible;
+}
+
 .header-social-media {
   display: none;
 }
@@ -159,7 +164,7 @@ transform-origin: center, center;
   color: grey;
 }
 
-/*----------------------------- nav menu -----------------------------------*/
+/*----------------------------- pop-up nav menu -----------------------------------*/
 nav {
   color: white;
   list-style-type: none;
@@ -359,10 +364,26 @@ div.trending-recipe {
     order: 3;
   }
 
+.tooltip {
+  visibility: hidden;
+  background-color: #111111;
+  color: #F5F5F5;
+  box-shadow: -2px -2px 1px 1px #282828;
+  text-align: center;
+  border-radius: 6px;
+  padding: 10px;
+  position: absolute;
+  z-index: 1;
+  font-family: "playfair display", sans-serif;
+  font-size: 0.7em;
+  transition: visibility 0.3s ease;
+}
+
   .fa-fire, .fa-instagram {
     color: #ffffff;
     opacity: 1;
     margin-left: 1em;
+    transition: 1s ease;
   }
 
   .fa-bars {
@@ -372,5 +393,17 @@ div.trending-recipe {
 
   .fa-search {
     margin-right: 0.3em;
+  }
+
+  nav.large-screen-nav {
+    height: 4em;
+    background-color: white;
+    border-bottom: 1px solid #D3D3D3;
+    width: 100%;
+    color: black;
+    right: 0;
+    margin: 0;
+    background-image: none;
+
   }
 }
