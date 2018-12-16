@@ -1,39 +1,68 @@
 
   {
     "recipes" : [{
-    "id" : "2",
+    "id" : "0",
     "name" : "Cooked Baked Fried Ziti",
     "genre" : "Lunch",
+    "description" : "For serious pasta people",
+    "servings" : 4,
+    "time" : "1 hour 30 minutes",
+    "difficulty" : "beginner",
+    "ingredients" : ["8 oz pasta", "10oz water"],
+    "trending" : false
+  }, {
+    "id" : "1",
+    "name" : "Cornflakes & Milk Medley",
+    "genre" : "Lunch",
+    "description" : "Supper is NOW!",
+    "servings" : 1,
+    "time" : "1 minute",
+    "difficulty" : "beginner",
+    "trending" : true
+  }, {
+    "id" : "2",
+    "name" : "Kickin' Chicken with Spices",
+    "genre" : "Dinner",
+    "description" : "Nice name for normal chicken",
+    "servings" : 6,
+    "time" : "3 hours",
+    "difficulty" : "beginner",
     "trending" : false
   }, {
     "id" : "3",
-    "name" : "Cornflakes & Milk Medley",
-    "genre" : "Lunch",
+    "name" : "Rice a la Water",
+    "genre" : "Dinner",
+    "description" : "Yummy and filling every single time",
+    "servings" : 6,
+    "time" : "25 minutes",
+    "difficulty" : "beginner",
     "trending" : true
   }, {
     "id" : "4",
-    "name" : "Kickin' Chicken with Spices",
-    "genre" : "Dinner",
-    "trending" : false
+    "name" : "Chocolate Chocolate Brownie Cake",
+    "genre" : "Baking",
+    "description" : "Fattening but worthwhile dessert",
+    "servings" : 16,
+    "time" : "10 minutes",
+    "difficulty" : "Beginner",
+    "trending" : true
   }, {
     "id" : "5",
-    "name" : "Rice a la Water",
-    "genre" : "Dinner",
+    "name" : "Hearth Bread",
+    "genre" : "Baking",
+    "description" : "Challah in an unbraided form",
+    "servings" : 10,
+    "time" : "2 hours",
+    "difficulty" : "Intermediate",
     "trending" : true
   }, {
     "id" : "6",
-    "name" : "Chocolate Chocolate Brownie Cake",
-    "genre" : "Baking",
-    "trending" : true
-  }, {
-    "id" : "7",
-    "name" : "Hearth Bread",
-    "genre" : "Baking",
-    "trending" : true
-  }, {
-    "id" : "8",
     "name" : "Shmancy Ice Cream Roll",
     "genre" : "Dessert",
+    "description" : "Yours will never look this professional",
+    "servings" : 12,
+    "time" : "2 hours",
+    "difficulty" : "Advanced",
     "trending" : false
   }]
 }
