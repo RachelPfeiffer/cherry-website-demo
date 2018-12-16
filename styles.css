@@ -1,6 +1,7 @@
 html {
   overflow-x: hidden;
   overflow-y: scroll;
+  width: 100vw;
 }
 
 header {
@@ -238,10 +239,14 @@ nav.in {
 .recipe-image {
   width: 100%;
   margin-left: -2%;
-  transition: 1s ease;
 }
 
-.recipe-image:hover {
+.image-box .recipe-image {
+  transition: 1s ease;
+
+}
+
+.image-box .recipe-image:hover {
   transform: scale(1.2);
 }
 
@@ -257,6 +262,9 @@ nav.in {
   font-family: "playfair display", sans-serif;
   min-height: 2em;
   margin-top: 0;
+}
+
+.recipe-tile .recipe-name {
   margin-bottom: 1em;
 }
 

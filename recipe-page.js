@@ -31,10 +31,19 @@ navbar: function () {
 console.log("navbar");
 },
 
-title: function fillTitle() {
-  const titleSection = document.querySelector('.recipe-title');
-  titleSection.innerText = Controller.getTitle();
-},
+header: function fillHeader() {
+  const recipeGenre = document.querySelector('.recipe-genre');
+  recipeGenre.innerText = Controller.getGenre();
+
+  const recipeName = document.querySelector('.recipe-name');
+  recipeName.innerText = Controller.getName();
+
+  const recipeDescription = document.querySelector('.recipe-description');
+  recipeDescription.innerText = Controller.getDescription();
+
+  const recipeImage = document.querySelector('.recipe-image');
+  recipeImage.innerHTML = '<img src="' + Controller.getImg() + '">';
+}
 
 
 }
@@ -53,9 +62,20 @@ const Controller = {
     //(this.getRecipeID());
   },
 
-  getTitle : function getTitle() {
-    const currentRecipe = this.getRecipe();
-    return currentRecipe.name;
+  getName : function () {
+    return this.getRecipe().name;
+  },
+
+  getGenre : function () {
+    return this.getRecipe().genre;
+  },
+
+  getDescription : function () {
+    return this.getRecipe().description;
+  },
+
+  getImg : function () {
+    return 'img/'+this.getRecipe().id+'.jpg';
   }
 }
 
