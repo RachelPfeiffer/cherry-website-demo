@@ -43,6 +43,27 @@ header: function fillHeader() {
 
   const recipeImage = document.querySelector('.recipe-image');
   recipeImage.innerHTML = '<img src="' + Controller.getImg() + '">';
+},
+
+recipeInfo : function fillInfo() {
+  const recipeServings = document.querySelector('.servings');
+  recipeServings.innerText = Controller.getServings();
+
+  const recipeTime = document.querySelector('.time');
+  recipeTime.innerText = Controller.getTime();
+
+  const recipeDifficulty = document.querySelector('.difficulty');
+  recipeDifficulty.innerText = Controller.getDifficulty();
+},
+
+recipeIngredients : function fillIngredients() {
+  const ingredients =  Controller.getIngredients();
+  for (ingredient of ingredients) {
+    const newIng = document.createElement('li');
+    const ingList = document.querySelector('.ingredients');
+    newIng.innerText = ingredient;
+    ingList.appendChild(newIng);
+  }
 }
 
 
@@ -76,6 +97,22 @@ const Controller = {
 
   getImg : function () {
     return 'img/'+this.getRecipe().id+'.jpg';
+  },
+
+  getServings : function () {
+    return this.getRecipe().servings;
+  },
+
+  getTime : function () {
+    return this.getRecipe().time;
+  },
+
+  getDifficulty : function () {
+    return this.getRecipe().difficulty;
+  },
+
+  getIngredients : function () {
+    return this.getRecipe().ingredients;
   }
 }
 

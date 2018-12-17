@@ -18,6 +18,7 @@
     "servings" : 1,
     "time" : "1 minute",
     "difficulty" : "beginner",
+    "ingredients" : ["1 cup cornflakes", "1 cup milk"],
     "trending" : true
   }, {
     "id" : "2",
@@ -27,6 +28,7 @@
     "servings" : 6,
     "time" : "3 hours",
     "difficulty" : "beginner",
+    "ingredients" : ["1 chicken, cut in eighths", "1/2 cup ketchup", "1/2 cup mustard"],
     "trending" : false
   }, {
     "id" : "3",
@@ -36,15 +38,17 @@
     "servings" : 6,
     "time" : "25 minutes",
     "difficulty" : "beginner",
+    "ingredients" : ["1 cup rice", "2 cups water", "2 tablespoons oil", "1 teaspoon salt", "1 teaspoon chicken soup mix"],
     "trending" : true
   }, {
     "id" : "4",
-    "name" : "Chocolate Chocolate Brownie Cake",
+    "name" : "Chocolate Brownie Cake",
     "genre" : "Baking",
     "description" : "Fattening but worthwhile dessert",
     "servings" : 16,
     "time" : "10 minutes",
     "difficulty" : "Beginner",
+    "ingredients" : ["1 cup flour", "1 cup sugar", "3 eggs", "1 cup oil", "1 teaspoon vanilla",  "1/4 teaspoon salt", "1 teaspoon baking powder"],
     "trending" : true
   }, {
     "id" : "5",
@@ -54,6 +58,7 @@
     "servings" : 10,
     "time" : "2 hours",
     "difficulty" : "Intermediate",
+    "ingredients" : ["1 cup flour", "1 cup sugar", "1 spoon yeast", "1 egg", "1 cup oil", "1 teaspoon salt"],
     "trending" : true
   }, {
     "id" : "6",
@@ -63,6 +68,7 @@
     "servings" : 12,
     "time" : "2 hours",
     "difficulty" : "Advanced",
+    "ingredients" : ["1 ice cream", "1 roll"],
     "trending" : false
   }]
 }

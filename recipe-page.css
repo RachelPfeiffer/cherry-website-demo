@@ -43,3 +43,101 @@
   font-size: 1em;
   color: #888;
 }
+
+.recipe-info-box {
+  background-color: #f1f1f1;
+  width: 60%;
+  height: 140px;
+  margin: auto;
+  margin-top: 2em;
+}
+
+.recipe-info {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-family: "playfair display", sans-serif;
+  font-weight: normal;
+}
+.recipe-info-box div {
+  margin-right: 5%;
+  display: inline-flex;
+  width: auto;
+  font-size: 16px;
+}
+
+.recipe-info-box span {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 8px;
+  display: inline-block;
+  width: auto;
+  white-space: nowrap;
+  font-size: 22px;
+}
+
+.recipe-info-box button {
+  background-color: #ddd;
+  color: #555;
+  border: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+  font-family: "playfair display", sans-serif;
+  font-size: 20px;
+  font-weight: normal;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition: 0.3s ease;
+  margin-left: 2%;
+
+}
+
+.recipe-info-box button:hover{
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+.recipe-info {
+padding:1%;
+margin-left: 5%;
+margin-right: 5%;
+}
+
+.description {
+  margin: auto;
+  font-family: "playfair display", sans-serif;
+  font-size: 1.5em;
+  text-align: center;
+
+}
+
+.recipe-instructions {
+  width: 100%;
+  margin: auto;
+}
+
+div.ingredient-directions-box {
+  margin: 2em auto;
+  display: flex;
+  max-width: 630px;
+  font-family: "playfair display", serif;
+}
+
+ul.ingredients {
+  text-align: left;
+  margin-left: 0;
+  padding-left: 0;
+  height: 100%;
+  width: 30%:
+
+}
+
+div.directions {
+overflow: hidden;
+text-align: left;
+display: block;
+margin-left: 30px;
+width: 70%;
+}
