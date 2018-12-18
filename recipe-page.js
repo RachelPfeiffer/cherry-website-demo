@@ -26,6 +26,13 @@ function fn(e) {
 }
 },
 
+printButton : function () {
+  const printButton = document.querySelector('.print');
+  printButton.addEventListener('click', function () {
+    window.print();
+  })
+},
+
 navbar: function () {
 //Fill large navbar
 console.log("navbar");
