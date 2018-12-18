@@ -162,6 +162,7 @@ div.directions ol li {
   font-family: "playfair display", serif;
   line-height: 1.6em;
   margin: auto;
+  letter-spacing: 0.03em;
 }
 
 .recipe-article br {
@@ -170,10 +171,80 @@ div.directions ol li {
 blockquote {
   font-weight: bold;
   font-size: 2em;
-  width: 60%;
+  width: 40%;
   margin: 2em auto;
   float: left;
   border-bottom: 1px solid maroon;
   padding-bottom: 1em;
   margin-right: 1em;
+}
+
+.more-recipes {
+  width: 336px;
+  height: 336px;
+  background-color: #1d1d1e;
+  color: #ffffff;
+}
+
+.more-recipes h1 {
+width: 336px;
+text-align: center;
+font-size: 2em;
+font-family: "playfair display", serif;
+}
+
+.fa-times {
+  margin-top: 20px;
+  margin-left: 90%;
+}
+
+.close-box {
+  width: 100%;
+}
+
+.subscribe {
+  text-align: center;
+  font-family: "playfair display", serif;
+  font-size: 1em;
+  width: 80%;
+  margin: auto;
+}
+
+input {
+  background-color: inherit;
+  border-bottom: 1px solid #303030;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  color: #ffffff;
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 2.5em;
+}
+
+input::placeholder {
+  color: #ffffff;
+  font-family: "playfair display", serif;
+}
+
+input:focus {
+  border: none;
+}
+
+.subscribe-button {
+  background-color: #6aa84f;
+  font-family: "playfair display", serif;
+  border: none;
+  margin: 1em auto;
+  width: 80%;
+  padding: 10px;
+  text-align: center;
+  font-size: 0.8em;
+}
+
+.terms {
+  color: orange;
+  width: 100%;
+  height: 1em;
+  margin-top: -2em;
 }

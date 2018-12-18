@@ -118,7 +118,7 @@ a {
   top: 0;
   left: 0;
 }
-.fa-times {
+.fa-times .search{
 transition: 0.5s;
 margin-right: 50px;
 margin-top: 50px;
@@ -133,8 +133,12 @@ transform-origin: center, center;
 .fa-times.in {
 }
 
-.fa-times:hover {
+.fa-times .search:hover {
   transform: rotate(90deg);
+}
+
+.fa-times:hover {
+  cursor: pointer;
 }
 
 .search-input {
