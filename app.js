@@ -120,14 +120,14 @@ let searchInput = document.querySelector('#search-input');
 const searchFunction = searchInput.addEventListener('keydown', function () {
   const searchInBox = findInput(searchInput.value, stuff.recipes);
   for (result of searchInBox) {
-    createResult(result.name);
+    createResult(result);
   }
 });
 
 const createResult = function (x) {
   newResult = document.createElement('div');
   newResult.className = 'result';
-  newResult.innerText = x;
+  newResult.innerHTML = '<a class="result" href ="./recipe.html?id='+x.id+'"><img class="result-pic" src="img/'+x.id+'.jpg"><div class="result-name"><h3>'+ x.name + '</h3></div></a>';
   resultsDisplay.appendChild(newResult);
 }
 // end fillMainPage function

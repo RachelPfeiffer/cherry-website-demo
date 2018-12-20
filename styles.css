@@ -110,8 +110,9 @@ a {
 
 #search-box.in {
   display: block;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
   background-color: rgb(255,255,255,0.9);
   z-index: 5;
   position: absolute;
@@ -143,7 +144,7 @@ transform-origin: center, center;
 
 #search-input {
   display: block;
-  margin: 20% auto;
+  margin: 10% auto;
   border-top: none;
   border-right: none;
   border-left: none;
@@ -172,6 +173,8 @@ transform-origin: center, center;
   margin-right: 30%;
   text-align: center;
   color: grey;
+  overflow-y: scroll;
+  height: 400px;
 }
 
 /*----------------------------- pop-up nav menu -----------------------------------*/
@@ -337,6 +340,32 @@ color: #2F4F4F;
 .one-more-random-recipe span {
   font-family: sans-serif;
 }
+
+.result {
+  width: 500px;
+  height: 180px;
+  display: flex;
+  margin: 15px auto;
+  text-align: left;
+  background-color: rgb(47,79,79, 0.2);
+  color: #2F4F4F;
+}
+
+.result-pic {
+  height: 150px;
+  width: 150px;
+  margin: auto;
+  border-radius: 10px;
+  border: 2px solid grey;
+}
+
+.result-name {
+  font-family: "playfair display", serif;
+  margin: auto 15px;
+  line-height: 70px;
+  font-size: 20px;
+  text-align: left;
+display: block;}
 
 @media only screen and (min-width: 435px) {
   div.recipe-section.main-page {
