@@ -14,6 +14,18 @@
 
 <body>
 <header>
+
+  <div id="search-box" class="">
+    <span class="fas fa-times search"></span>
+    <div class="search-box-text">
+      <input type="text" placeholder="Search" class="search-input"></input>
+    <div id="results-display">
+      <span id="search-results-number">0</span>
+      <span>results for</span>
+      <span id="search-input">current search</span>
+    </div>
+  </div>
+</div>+
   <!-- Black header -->
   <section class='black-header'>
   <div class="header-search-trending">
@@ -26,12 +38,16 @@
   </div>
 
   <div class="header-social-media">
-    <div class="fab fa-twitter">
-      <div class="tooltip">Twitter</div>
-    </div>
+    <a href="http://www.twitter.com/zeenfood">
+      <div class="fab fa-twitter">
+        <div class="tooltip">Twitter</div>
+      </div>
+    </a>
+    <a href="http://www.instagram.com/zeenfood">
     <div class="fab fa-instagram">
       <div class="tooltip">Instagram</div>
     </div>
+  </a>
   </div>
 
   <div class="main-title">
@@ -53,7 +69,7 @@
     </div>
     <div class="recipe-image"></div>
   </section>
-
+<h1>Current Scroll: </h1><div id="showScroll"></div>
   <section class='recipe-info-box'>
     <div class="recipe-info">
     <div><h1>Serves: </h1><span class="servings"></span></div>
@@ -115,7 +131,7 @@
 <section class="previous-next">previous-next</section>
 <section class="comment">comment</section>
 <footer>footer</footer>
-  <h1>Hello, this is the recipe page! Welcome!</h1>
+
   <script type="text/javascript" src="recipe-page.js">
 
   </script>

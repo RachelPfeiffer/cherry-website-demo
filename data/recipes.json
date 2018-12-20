@@ -2,19 +2,19 @@
   {
     "recipes" : [{
     "id" : "0",
-    "name" : "Cooked Baked Fried Ziti",
-    "genre" : "Lunch",
-    "description" : "For serious pasta people",
+    "name" : "cooked baked fried ziti",
+    "genre" : "lunch",
+    "description" : "for serious pasta people",
     "servings" : 4,
     "time" : "1 hour 30 minutes",
     "difficulty" : "beginner",
-    "ingredients" : ["8 oz pasta", "10oz water"],
+    "ingredients" : ["8 oz pasta", "10 oz water", "10 oz milk"],
     "trending" : false
   }, {
     "id" : "1",
-    "name" : "Cornflakes & Milk Medley",
-    "genre" : "Lunch",
-    "description" : "Supper is NOW!",
+    "name" : "cornflakes & milk medley",
+    "genre" : "lunch",
+    "description" : "supper is NOW!",
     "servings" : 1,
     "time" : "1 minute",
     "difficulty" : "beginner",
@@ -22,9 +22,9 @@
     "trending" : true
   }, {
     "id" : "2",
-    "name" : "Kickin' Chicken with Spices",
-    "genre" : "Dinner",
-    "description" : "Nice name for normal chicken",
+    "name" : "kickin' chicken with spices",
+    "genre" : "dinner",
+    "description" : "nice name for normal chicken",
     "servings" : 6,
     "time" : "3 hours",
     "difficulty" : "beginner",
@@ -32,9 +32,9 @@
     "trending" : false
   }, {
     "id" : "3",
-    "name" : "Rice a la Water",
-    "genre" : "Dinner",
-    "description" : "Yummy and filling every single time",
+    "name" : "rice a la water",
+    "genre" : "dinner",
+    "description" : "yummy and filling every single time",
     "servings" : 6,
     "time" : "25 minutes",
     "difficulty" : "beginner",
@@ -42,32 +42,32 @@
     "trending" : true
   }, {
     "id" : "4",
-    "name" : "Chocolate Brownie Cake",
-    "genre" : "Baking",
-    "description" : "Fattening but worthwhile dessert",
+    "name" : "chocolate brownie cake",
+    "genre" : "baking",
+    "description" : "fattening but worthwhile dessert",
     "servings" : 16,
     "time" : "10 minutes",
-    "difficulty" : "Beginner",
+    "difficulty" : "beginner",
     "ingredients" : ["1 cup flour", "1 cup sugar", "3 eggs", "1 cup oil", "1 teaspoon vanilla",  "1/4 teaspoon salt", "1 teaspoon baking powder"],
     "trending" : true
   }, {
     "id" : "5",
-    "name" : "Hearth Bread",
-    "genre" : "Baking",
-    "description" : "Challah in an unbraided form",
+    "name" : "hearth bread",
+    "genre" : "baking",
+    "description" : "challah in an unbraided form",
     "servings" : 10,
     "time" : "2 hours",
-    "difficulty" : "Intermediate",
+    "difficulty" : "intermediate",
     "ingredients" : ["1 cup flour", "1 cup sugar", "1 spoon yeast", "1 egg", "1 cup oil", "1 teaspoon salt"],
     "trending" : true
   }, {
     "id" : "6",
-    "name" : "Shmancy Ice Cream Roll",
-    "genre" : "Dessert",
-    "description" : "Yours will never look this professional",
+    "name" : "shmancy ice cream eoll",
+    "genre" : "dessert",
+    "description" : "yours will never look this professional",
     "servings" : 12,
     "time" : "2 hours",
-    "difficulty" : "Advanced",
+    "difficulty" : "advanced",
     "ingredients" : ["1 ice cream", "1 roll"],
     "trending" : false
   }]

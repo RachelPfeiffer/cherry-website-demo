@@ -11,33 +11,41 @@
 <body>
 
   <header>
-    <div class="black-header">
+    <section class='black-header'>
     <div class="header-search-trending">
-      <span class="fas fa-search"></span>
-      <span class="fas fa-fire"></span>
-    </div>
+      <div class="fas fa-search">
+        <div class="tooltip">Search</div>
+      </div>
+      </div>
 
     <div class="header-social-media">
-      <span class="fab fa-twitter"></span>
-      <span class="fab fa-instagram"></span>
+      <a href="http://www.twitter.com/zeenfood">
+        <div class="fab fa-twitter">
+          <div class="tooltip">Twitter</div>
+        </div>
+      </a>
+      <a href="http://www.instagram.com/zeenfood">
+      <div class="fab fa-instagram">
+        <div class="tooltip">Instagram</div>
+      </div>
+    </a>
     </div>
 
     <div class="main-title">
-      <h1 class="main-logo">crème</h1>
+      <h1 class="main-logo"><a href="/">crème</a></h1>
       <span class="slogan">a food zeen demo</span>
     </div>
 
     <span class="fas fa-bars"></span>
-  </div>
+  </section>
 
     <div id="search-box" class="">
       <span class="fas fa-times search"></span>
       <div class="search-box-text">
-        <input type="text" placeholder="Search" class="search-input"></input>
+        <input type="text" placeholder="Search" id="search-input"></input>
       <div id="results-display">
         <span id="search-results-number">0</span>
         <span>results for</span>
-        <span id="search-input">current search</span>
       </div>
     </div>
     </div>

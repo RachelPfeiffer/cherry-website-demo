@@ -12,6 +12,18 @@ return response.json();
 
 // View:
 const View = {
+  init : function () {
+    View.title();
+    View.tooltips();
+    View.printButton();
+    View.navbar();
+    View.header();
+    View.recipeInfo();
+    View.recipeIngredients();
+    View.slideInBox();
+    View.searchBox();
+  },
+
   tooltips: function () {
 //Get Tooltips to follow the mouse
 var tooltip = document.querySelectorAll('.tooltip');
@@ -38,6 +50,10 @@ navbar: function () {
 console.log("navbar");
 },
 
+title : function fillTitle() {
+  document.title = Controller.getName() +" - Zeen Food";
+},
+
 header: function fillHeader() {
   const recipeGenre = document.querySelector('.recipe-genre');
   recipeGenre.innerText = Controller.getGenre();
@@ -50,6 +66,19 @@ header: function fillHeader() {
 
   const recipeImage = document.querySelector('.recipe-image');
   recipeImage.innerHTML = '<img src="' + Controller.getImg() + '">';
+},
+
+searchBox : function searchbox() {
+const searchButton = document.querySelector('.fa-search');
+const searchBox = document.getElementById('search-box');
+searchButton.addEventListener('click', function () {
+  searchBox.classList.add('in');
+})
+
+const xButton = document.querySelector('.fa-times');
+  xButton.addEventListener('click', function () {
+    searchBox.classList.remove('in');
+  })
 },
 
 recipeInfo : function fillInfo() {
@@ -71,6 +100,21 @@ recipeIngredients : function fillIngredients() {
     newIng.innerText = ingredient;
     ingList.appendChild(newIng);
   }
+},
+
+slideInBox : function () {
+  const slideBox = document.querySelector('.more-recipes');
+  window.addEventListener('scroll', function () {
+    if (pageYOffset > 900) {
+      slideBox.classList.add('in');
+    } else {
+      slideBox.classList.remove('in');
+    }
+  })
+const xButton = document.querySelector('.fa-times');
+  xButton.addEventListener('click', function () {
+    slideBox.classList.add('hidden');
+  })
 }
 
 
@@ -78,6 +122,10 @@ recipeIngredients : function fillIngredients() {
 
 // Controller:
 const Controller = {
+  init : function () {
+    View.init();
+    Model.init();
+  },
   getRecipeID : function getRecipeID() {
     const twoLists = window.location.href.split('html?id=');
     const recipeID = twoLists[1];
