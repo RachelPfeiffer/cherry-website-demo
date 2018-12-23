@@ -1,13 +1,4 @@
-let jsonResponse;
-// Model:
-const Model = {
-  fetch: fetch('/data/recipes.json').then(function (response) {
-return response.json();
-}).then(function (jsonFile) {
-  jsonResponse = jsonFile.recipes;
-  console.log(jsonResponse);
-})
-}
+
 
 
 // View:
@@ -16,7 +7,6 @@ const View = {
     View.title();
     View.tooltips();
     View.printButton();
-    View.navbar();
     View.header();
     View.recipeInfo();
     View.recipeIngredients();
@@ -43,11 +33,6 @@ printButton : function () {
   printButton.addEventListener('click', function () {
     window.print();
   })
-},
-
-navbar: function () {
-//Fill large navbar
-console.log("navbar");
 },
 
 title : function fillTitle() {

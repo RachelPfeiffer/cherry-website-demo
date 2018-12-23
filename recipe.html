@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <!--link to playfair font-->
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Playfair+Display" />
+  <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 </head>
 
 
@@ -25,7 +26,7 @@
       <span id="search-input">current search</span>
     </div>
   </div>
-</div>+
+</div>
   <!-- Black header -->
   <section class='black-header'>
   <div class="header-search-trending">
@@ -58,7 +59,11 @@
   <span class="fas fa-bars"></span>
 </section>
 
-  <nav class="large-screen-nav"></nav>
+  <div class="large-screen-nav">
+    <ul class="nav-cats">
+      <li class="cat about">About Me</li>
+    </ul>
+  </div>
 </header>
 <main>
   <section class='recipe-header'>
@@ -69,7 +74,6 @@
     </div>
     <div class="recipe-image"></div>
   </section>
-<h1>Current Scroll: </h1><div id="showScroll"></div>
   <section class='recipe-info-box'>
     <div class="recipe-info">
     <div><h1>Serves: </h1><span class="servings"></span></div>
@@ -79,7 +83,7 @@
   </div>
   </section>
 
-  <section class='recipe-instructions'>lorem
+  <section class='recipe-instructions'>
     <div class="description"> Lorem ipsum dolor sit amet, consectetur adi </div>
     <div class="ingredient-directions-box"><div class="ingredients-box"><h1>Ingredients</h1><ul class="ingredients"></ul></div>
     <div class="directions">
@@ -116,7 +120,7 @@
 
   Try to cook extra at the beginning of the holiday so you can enjoy the intermediate days and have less to do at the end.<br></br><em>Reprinted from an article by Emuna Braverman on Aish.com</em></section>
 </main>
-<section class="share-bar">share bar</section>
+<!-- <section class="share-bar">share bar</section> -->
 <section class="more-recipes">
   <div class = "fas fa-times"></div>
   <div class="top-box"><h1>Sign Up</h1></div>
@@ -126,13 +130,12 @@
       <div><input type="checkbox" class="terms"></input><span>I consent to the <a>terms and conditions</a></span></div>
 
 </section>
-<section class="author-bio">author bio</section>
+<!-- <section class="author-bio">author bio</section>
 <section class="related-recipes">related recipes</section>
 <section class="previous-next">previous-next</section>
-<section class="comment">comment</section>
-<footer>footer</footer>
+<section class="comment">comment</section> -->
+<!-- <footer>footer</footer> -->
 
-  <script type="text/javascript" src="recipe-page.js">
-
-  </script>
+  <script type="text/javascript" src="recipe-page.js"></script>
+  <script type="text/javascript" src="sharedjs.js"></script>
 </body>

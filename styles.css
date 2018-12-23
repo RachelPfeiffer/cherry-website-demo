@@ -178,7 +178,7 @@ transform-origin: center, center;
 }
 
 /*----------------------------- pop-up nav menu -----------------------------------*/
-nav {
+.slide-in-navigation {
   color: white;
   list-style-type: none;
   background-image: url('img/bigspoon.jpg');
@@ -192,7 +192,7 @@ nav {
   margin-bottom: -100%;
 }
 
-nav.in {
+.slide-in-naviation.in {
   transform: translateX(-150%);
 }
 
@@ -200,7 +200,7 @@ nav.in {
   transform: translateX(-86%);
 }
 
-.main-logo.nav {
+.main-logo {
   margin-top: 0;
   padding-bottom: 1em;
   padding-top: 0.5em;
@@ -238,6 +238,7 @@ nav.in {
   margin: 4vw;
   font-size: 1.3em;
 }
+
 
 /*---------------main page recipes--------------------*/
 .recipe-section.main-page {
@@ -471,17 +472,5 @@ display: block;}
 
   .fa-search {
     margin-right: 0.3em;
-  }
-
-  nav.large-screen-nav {
-    height: 4em;
-    background-color: white;
-    border-bottom: 1px solid #D3D3D3;
-    width: 100%;
-    color: black;
-    right: 0;
-    margin: 0;
-    background-image: none;
-
   }
 }
