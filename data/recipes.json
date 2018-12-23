@@ -70,5 +70,65 @@
     "difficulty" : "advanced",
     "ingredients" : ["1 ice cream", "1 roll"],
     "trending" : false
-  }]
+  },
+  {
+    "id" : "7",
+    "name" : "buttermilk pancakes",
+    "genre" : "dinner",
+    "description" : "the 'two of everything' recipe",
+    "servings" : 4,
+    "time" : "30 minutes",
+    "difficulty" : "intermediate",
+    "ingredients" : ["2 eggs", "2 cups flour", "2 cups milk", "2 tsps baking powder", "2 tablespoons sugar"],
+    "trending" : false
+  },
+
+  {
+    "id" : "8",
+    "name" : "super simple salad",
+    "genre" : "lunch",
+    "description" : "seriously, this isn't actual cooking",
+    "servings" : 12,
+    "time" : "1 minute",
+    "difficulty" : "beginner",
+    "ingredients" : ["lettuce", "salad dressing"],
+    "trending" : false
+  },
+
+  {
+    "id" : "9",
+    "name" : "classic chocolate chip cookies",
+    "genre" : "baking",
+    "description" : "double the recipe - then eat half the dough!",
+    "servings" : 15,
+    "time" : "1 hour",
+    "difficulty" : "beginner",
+    "ingredients" : ["1 cup white sugar", "1 cup brown sugar", "1 cup flour", "1 cup margarine", "1 tsp vanilla", "2 eggs", "1/2 cup chocolate chips"],
+    "trending" : false
+  },
+
+  {
+    "id" : "10",
+    "name" : "cake a la cup",
+    "genre" : "dessert",
+    "description" : "for people with dishwashers",
+    "servings" : 12,
+    "time" : "1 hour",
+    "difficulty" : "intermediate",
+    "ingredients" : ["1 cup flour", "1 cup sugar", "1 egg", "1 cup oil"],
+    "trending" : false
+  },
+
+  {
+    "id" : "11",
+    "name" : "moose for the goose",
+    "genre" : "dessert",
+    "description" : "chocolate chocolate - yippee",
+    "servings" : 8,
+    "time" : "2 hours",
+    "difficulty" : "advanced",
+    "ingredients" : ["7 oz chocolate", "7 eggs", "1 cup sugar", "1 cup margarine"],
+    "trending" : false
+  }
+]
 }
