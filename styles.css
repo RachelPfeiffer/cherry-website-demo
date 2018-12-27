@@ -75,19 +75,22 @@ ul {
 
 
 /*---------------main page recipes--------------------*/
-.recipe-section.main-page {
-  width: 100vw;
-  margin: auto;
+main {
+  margin-top: 0;
+}
+
+.recipes {
+  width: 100%;
+  margin-top: 0;
+  padding-inline-start: 0;
 }
 /*don't let the picture overflow its container even when it's zoomed*/
 .image-box {
   overflow: hidden;
-  height: 100vh;
 }
 .recipe-image {
   width: 100%;
-  height: 100%;
-  margin-left: -2%;
+  margin-left: 0;
 }
 
 .image-box .recipe-image {
@@ -104,6 +107,8 @@ ul {
   font-size: 0.8em;
   font-family: sans-serif;
   line-height: 3em;
+  margin-left: 5%;
+  text-transform: uppercase;
 }
 
 .recipe-name {
@@ -111,6 +116,7 @@ ul {
   font-family: "playfair display", sans-serif;
   min-height: 2em;
   margin-top: 0;
+  margin-left: 5%;
 }
 
 .recipe-tile .recipe-name {
@@ -126,6 +132,11 @@ ul {
   padding-top: 1em;
 }
 
+.trending-recipes.main-page {
+  margin-top: 1em;
+  font-size: 0.8em;
+}
+
 .trending-section .recipe-image {
   border-radius: 50%;
   width: 75px;
@@ -133,11 +144,12 @@ ul {
   transform: scale(0.8);
 }
 
-div.trending-recipe {
+.trending-recipe {
   margin: auto;
   padding-left: 10%;
   display: flex;
   height: 80px;
+  margin-left: 10%;
 }
 
 .trending.recipe-name {
@@ -154,27 +166,78 @@ div.trending-recipe {
 }
 
 /*-----Random Recipe Section---*/
-.one-more-random-recipe {
-  padding-top: 100px;
+.featured {
   text-align: center;
-  color: white;
-  background-repeat: no-repeat;
   background-size: cover;
-  transition: 0.2s ease;
+  background-position: center center;
+  height: 150px;
+  position: relative;
+  z-index: 5;
+  color: #2F4f4f;
+  transition: 0.3s ease;
+  margin-top: 1em;
 }
 
-.one-more-random-recipe:hover {
-color: #2F4F4F;
+.overlay {
+  display: none;
+  width: 100%;
+  min-height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background: rgba(0,0,0,0.5);
+  transition: 0.3s ease;
+
+}
+.featured:hover .overlay {
+display: block;
 }
 
-.one-more-random-recipe h1 {
+.featured-recipe {
+  color: #2F4f4f;
+  transition: 0.3s ease;
+
+}
+.featured-recipe:hover {
+  color: white;
+}
+
+.featured-recipe {
+  z-index: 5;
+  margin-top: 1em;
+}
+
+.featured:hover {
+  color: white;
+}
+
+.featured h1 {
   font-size: 1.5em;
   font-family: "playfair display", sans-serif;
 }
 
+.featured .recipe-genre, .featured .recipe-name {
+  margin-left: auto;
+}
+
+.featured .recipe-name {
+  font-size: 1em;
+}
+
+.featured .recipe-genre {
+  font-size: 0.7em;
+  margin-top: 40px;
+}
+
+.description {
+  text-transform: capitalize;
+}
 .one-more-random-recipe span {
   font-family: sans-serif;
 }
+
+/* Search */
 
 .result {
   width: 500px;

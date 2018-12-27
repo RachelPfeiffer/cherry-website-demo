@@ -106,9 +106,12 @@ console.log("mainpage is linked and operating");
 // })()
 const View = {
   fillMain : function (data) {
-    const recipeSection = document.querySelector('.recipes');
-    const RecipesToShow = data.slice(0,3);
-    for (recipe of RecipesToShow) {
+    console.log(data);
+    const recipeSpot = document.querySelector('.recipes');
+    console.log(recipeSpot);
+    const recipesToShow = data.slice(data.length-3,data.length);
+    console.log(recipesToShow);
+    for (recipe of recipesToShow) {
       const recipeTile = document.createElement('a');
       recipeTile.href = './recipe.html?id='+recipe.id;
       recipeTile.classList = "recipe-tile";
@@ -116,19 +119,16 @@ const View = {
     //   const linkToRecipe = document.createElement('a');
     //   linkToRecipe.innerHTML = 'View Recipe';
     //   recipeSection.appendChild(recipeTile);
-    recipeSection.appendChild(recipeTile);
+    recipeSpot.appendChild(recipeTile);
+    console.log(recipeTile);
     }
   },
 
   fillTrending : function (data) {
-    const trendingSection = document.createElement('div');
-    trendingSection.classList = 'trending-section main-page';
-    trendingSection.innerText = 'Trending';
+    const trendingSection = document.querySelector('.trending-section.main-page');
      const trendingSectionRecipes = document.createElement('div');
      trendingSectionRecipes.classList = 'trending-recipes main-page';
      trendingSection.appendChild(trendingSectionRecipes);
-     body = document.querySelector('body');
-     body.appendChild(trendingSection);
      for (recipe of data) {
        if(recipe.trending) {
          const trendingRecipe = document.createElement('a');
@@ -139,5 +139,15 @@ const View = {
          // urlForRestaurant(trendingRecipe);
        };
      }
+  },
+
+  fillFeatured : function (data) {
+    const featuredSection = document.querySelector('.featured');
+    const featuredRecipe = data[data.length-4];
+    const newRecipe = document.createElement('div');
+    newRecipe.className = "featured-recipe";
+    newRecipe.innerHTML = '<div class="recipe-genre">'+featuredRecipe.genre+'</div><div class="recipe-name">'+featuredRecipe.name+'</div><div class="description">'+featuredRecipe.description+'</div>';
+    featuredSection.appendChild(newRecipe);
+    featuredSection.style.backgroundImage = "url('img/"+featuredRecipe.id+".jpg')"
   }
 }
