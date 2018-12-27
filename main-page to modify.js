@@ -1,17 +1,53 @@
-const hamburgur = document.querySelector('.fa-bars');
-const navMenu = document.querySelector('nav');
-const blackHead = document.querySelector('.black-header');
-const magnifyer = document.querySelector('.header-search-trending');
-const searchWindow = document.querySelector('#search-box');
-const exit = document.querySelector('.fa-times');
-const body = document.querySelector('body');
-const userInput = document.querySelector('#user-input');
-let resultsDisplay = document.querySelector('#results-display');
+// Goal for tonight: break this code into smaller functions, divided among view
+// and controller. The functions have to work :)
 
+// const hamburgur = document.querySelector('.fa-bars');
+// const navMenu = document.querySelector('nav');
+// const blackHead = document.querySelector('.black-header');
+// const magnifyer = document.querySelector('.header-search-trending');
+// const searchWindow = document.querySelector('#search-box');
+// const exit = document.querySelector('.fa-times');
+// const body = document.querySelector('body');
+// const userInput = document.querySelector('#user-input');
+// let resultsDisplay = document.querySelector('#results-display');
+const Model = {
+  searchResults : new Set(),
+  recipes : fetch('data/recipes.json').then(function (response) {
+    console.log(response.json());
+  })
 
+}
+// Controller
+const Controller = {
+  splitIntoWords : function (array) {
+    return wordsOfIngredient = array.split(" ");
+  },
+
+  searchForText : function (string, searchText) {
+    if (string.indexOf(searchText) != -1) {
+      return string;
+    };
+  },
+
+  searchInput : function (input, searchText) {
+    for (recipe of Model.recipes) {
+      for (value of Object.values(recipe)) {
+        if(typeof value === "object") {
+          value = splitIntoWords(value);
+        };
+        const results = searchForText(value);
+        Model.searchResults.add(results);
+      }
+    } // TODO: model.recipes
+  }
+}
+
+const View = {
+
+}
 function findInput(textToSearchFor, infoToSearchThrough) {
-  let results = new Set();
-  resultsDisplay.innerText = "";
+// View
+
   // for each recipe object: if the value is a string - find me index of toSearch, if true, tell me the value.
   // if it's an array, split into strings, then find me index of toSearch, if true tell me the value of the original array.
   for (recipe of infoToSearchThrough) {
@@ -19,14 +55,11 @@ function findInput(textToSearchFor, infoToSearchThrough) {
       //for the ingredients list - split into words and check for searched value
       if (typeof value === "object") {
         for(ingredient of value) {
-          let wordsOfIngredient = ingredient.split(" ");
-          if (wordsOfIngredient.indexOf(textToSearchFor) != -1) {
-            results.add(recipe);
-          };
+          // FUNCTION SPLIT INTO WORDS
         }
-        // for any other category - check teh string for the searched value
-      } else if (typeof value === "string") {
-        if (value.indexOf(textToSearchFor) != -1) {
+      };
+      (typeof value === "string") {
+
           results.add(recipe);
         };
       }
@@ -75,7 +108,7 @@ function fillMainPage(stuff) {
   const recipeSection = document.createElement('div');
   recipeSection.classList = 'recipe-section main-page';
   body.appendChild(recipeSection);
-  const mainRecipesToShow = stuff.recipes.slice(0,3);
+  const mainRecipesToShow = stuff.slice(0,3);
   for (recipe of mainRecipesToShow) {
     const recipeTile = document.createElement('a');
     recipeTile.href = './recipe.html?id='+recipe.id;

@@ -28,6 +28,113 @@ body {
     max-width: 100vw;
   }
 
+  .recipe-name {
+    text-transform: capitalize;
+  }
+/* =========================== Black Header ==================== */
+
+/*--------------Black Header---------------------------*/
+.black-header {
+  width: 100%;
+  background-color: #1C1D1E;
+  height: 70px;
+  display: flex;
+}
+
+/*-------------Header icons-------------------------*/
+
+.fa-search {
+  color: #ffffff;
+  display: inline-block;
+  width: 9%;
+  text-align: center;
+  margin: auto;
+}
+
+ {
+  cursor: pointer;
+}
+
+.main-title {
+  width: 80%;
+}
+h1.main-logo {
+  display: block;
+  font-size: 3em;
+  font-weight: lighter;
+  font-family: georgia times new roman;
+  color: #EAEAEA;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a.main-logo:hover, a.main-logo:active, a.main-logo:visited {
+  color: #eaeaea;
+  text-decoration: none;
+}
+
+{
+  cursor: pointer;
+}
+
+.slogan {
+  display: none;
+}
+
+.fa-bars {
+  color: #ffffff;
+  display: inline-block;
+  width: 10%;
+  text-align: left;
+  margin: auto;
+  margin-right: 1.5em;
+}
+
+.header-social-media {
+  display: none;
+}
+
+.header-search-trending {
+  width: 10%;
+  margin: auto;
+  text-align: right;
+}
+
+.fa-fire {
+  opacity: 0;
+}
+
+
+#search-button {
+  cursor: pointer;
+}
+
+.tooltip {
+  visibility: hidden;
+  background-color: #111111;
+  color: #F5F5F5;
+  box-shadow: -2px -2px 1px 1px #282828;
+  text-align: center;
+  border-radius: 6px;
+  padding: 10px;
+  position: absolute;
+  z-index: 1;
+  font-family: "playfair display", sans-serif;
+  font-size: 0.7em;
+  transition: visibility 0.3s ease;
+}
+
+.fa-fire:hover .tooltip, .fa-twitter:hover .tooltip,
+.fa-search:hover .tooltip, .fa-instagram:hover .tooltip {
+  visibility: visible;
+}
+
+a.main-logo:hover, .fa-search:hover, .fa-bars:hover, .fa-fire:hover, .slogan:hover,
+.fa-instagram:hover, .fa-twitter:hover, .nav-sections li:hover, .fa-facebook-f:hover,
+.fa-youtube-square:hover {
+  cursor: pointer;
+}
 /* ------------------------ large screen nav bar ================*/
 
 .table-just-for-centering {
@@ -122,6 +229,79 @@ font-family: "playfair display", serif;
 
 }
 
+/* ================== Pop-in Search Window ============= */
+
+/*-------Search window------------------*/
+#search-box {
+  transition: 0.1s ease;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+#search-box.in {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  background-color: rgb(255,255,255,0.9);
+  z-index: 5;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.fa-times.search{
+transition: 0.4s;
+margin-right: 50px;
+margin-top: 50px;
+float: right;
+font-size: 45px;
+visibility: visible;
+}
+
+.fa-times.search:hover {
+  transform: rotate(90deg);
+}
+
+.fa-times:hover {
+  cursor: pointer;
+}
+
+.search-input {
+  display: block;
+  margin: 10% auto;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 1px grey solid;
+  width: 40%;
+  text-align: center;
+  background-color: rgb(255,255,255,0);
+  height: 3.4em;
+  font-size: 2em;
+  font-family: "playfair display",  serif;
+}
+
+.search-input::placeholder {
+  font-family: "playfair display", sans-serif;
+  color:black;
+  font-size: 1.3em;
+}
+
+.search-input:focus {
+  outline: none;
+}
+
+#results-display {
+  margin-left: 30%;
+  margin-right: 30%;
+  text-align: center;
+  color: grey;
+  overflow-y: scroll;
+  height: 400px;
+}
+
+
   /* ======================== Footer ======================== */
   #footer {
   	text-transform: uppercase;
@@ -158,3 +338,70 @@ font-family: "playfair display", serif;
     visibility: hidden;
   }
 }
+
+@media only screen and (min-width: 750px) {
+    .black-header {
+      height: 180px;
+      background-color: #0A0A0A;
+      background-repeat: no-repeat;
+    }
+
+    .header-social-media, .header-search-trending {
+      display: inline-block;
+      color: #E8E8E8;
+    }
+
+    .header-social-media{
+      color: #ffffff;
+      width: 9%;
+      text-align: center;
+      margin: auto;
+      order: -1;
+    }
+
+    .main-title {
+      width: 65%;
+    }
+
+    .main-logo {
+      margin-bottom: -0.6em;
+      padding-bottom: 0.5em;
+      padding-top: 0.35em;
+      font-size: 2em;
+      color: white;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .slogan {
+      color: #93949B;
+      text-align: center;
+      display: block;
+      letter-spacing: 1.5px;
+      font-size: 1.2em;
+      font-family: serif;
+    }
+
+    .header-search-trending {
+      order: 3;
+    }
+
+
+
+    .fa-fire, .fa-instagram {
+      color: #ffffff;
+      opacity: 1;
+      margin-left: 1em;
+      transition: 1s ease;
+    }
+
+    .fa-bars {
+      position: absolute;
+      right: -1000%;
+    }
+
+    .fa-search {
+      margin-right: 2em;
+      width: auto;
+    }
+  }

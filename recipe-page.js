@@ -1,4 +1,11 @@
 
+let jsonResponse = 6;
+fetch('/data/recipes.json').then(function (response) {
+return response.json();
+}).then(function (jsonFile) {
+jsonResponse = jsonFile.recipes;
+console.log(jsonResponse);
+})
 
 
 // View:
