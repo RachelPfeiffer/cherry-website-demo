@@ -105,11 +105,11 @@ console.log("mainpage is linked and operating");
 // }
 // })()
 const View = {
-  fillMain : function (data) {
+  fillMain : function (data,index, sectionNumber) {
     console.log(data);
-    const recipeSpot = document.querySelector('.recipes');
+    const recipeSpot = document.querySelector('.recipes.section'+sectionNumber);
     console.log(recipeSpot);
-    const recipesToShow = data.slice(data.length-3,data.length);
+    const recipesToShow = data.slice(data.length-index,data.length-index+3);
     console.log(recipesToShow);
     for (recipe of recipesToShow) {
       const recipeTile = document.createElement('a');
@@ -139,11 +139,12 @@ const View = {
          // urlForRestaurant(trendingRecipe);
        };
      }
+     console.log("Successfully filled!");
   },
 
-  fillFeatured : function (data) {
-    const featuredSection = document.querySelector('.featured');
-    const featuredRecipe = data[data.length-4];
+  fillFeatured : function (data, index, sectionNumber) {
+    const featuredSection = document.querySelector('.featured.section'+sectionNumber);
+    const featuredRecipe = data[data.length-index];
     const newRecipe = document.createElement('div');
     newRecipe.className = "featured-recipe";
     newRecipe.innerHTML = '<div class="recipe-genre">'+featuredRecipe.genre+'</div><div class="recipe-name">'+featuredRecipe.name+'</div><div class="description">'+featuredRecipe.description+'</div>';

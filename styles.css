@@ -1,77 +1,5 @@
-html {
-  overflow-x: hidden;
-  overflow-y: scroll;
-  width: 100vw;
-}
 
-header {
 
-  }
-
-ul {
-  list-style: none;
-}
-
-/*----------------------------- pop-up nav menu -----------------------------------*/
-.slide-in-navigation {
-  color: white;
-  list-style-type: none;
-  background-image: url('img/bigspoon.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 88vw;
-  position: relative;
-  right: -150%;
-  transition: 0.5s ease;
-  margin-top: -70px;
-  margin-bottom: -100%;
-}
-
-.slide-in-naviation.in {
-  transform: translateX(-150%);
-}
-
-.black-header.out {
-  transform: translateX(-86%);
-}
-
-.main-logo {
-  margin-top: 0;
-  padding-bottom: 1em;
-}
-
-.nav-sections {
-  margin-top: 30%;
-  margin-bottom: 30%;
-  margin-left: -5%;
-  font-size: 1.8em;
-  text-align: center;
-}
-
-.nav-sections li {
-  margin-top: 0.5em;
-}
-
- {
-  cursor: pointer;
-}
-
-#contact-bar {
-  height: 30%;
-}
-#contact-methods {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 3%;
-  width: 90vw;
-}
-
-#contact-methods li {
-  width: 10vw;
-  height: 10vw;
-  margin: 4vw;
-  font-size: 1.3em;
-}
 
 
 /*---------------main page recipes--------------------*/
@@ -94,7 +22,7 @@ main {
 }
 
 .image-box .recipe-image {
-  transition: 1s ease;
+  transition: 3s ease;
 
 }
 
@@ -165,7 +93,7 @@ main {
   white-space:nowrap;
 }
 
-/*-----Random Recipe Section---*/
+/*-----Featured Recipe Section---*/
 .featured {
   text-align: center;
   background-size: cover;
@@ -185,7 +113,6 @@ main {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1;
   background: rgba(0,0,0,0.5);
   transition: 0.3s ease;
 
@@ -233,37 +160,7 @@ display: block;
 .description {
   text-transform: capitalize;
 }
-.one-more-random-recipe span {
-  font-family: sans-serif;
-}
 
-/* Search */
-
-.result {
-  width: 500px;
-  height: 180px;
-  display: flex;
-  margin: 15px auto;
-  text-align: left;
-  background-color: rgb(47,79,79, 0.2);
-  color: #2F4F4F;
-}
-
-.result-pic {
-  height: 150px;
-  width: 150px;
-  margin: auto;
-  border-radius: 10px;
-  border: 2px solid grey;
-}
-
-.result-name {
-  font-family: "playfair display", serif;
-  margin: auto 15px;
-  line-height: 70px;
-  font-size: 20px;
-  text-align: left;
-display: block;}
 
 @media only screen and (min-width: 435px) {
   div.recipe-section.main-page {

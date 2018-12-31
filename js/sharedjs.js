@@ -1,11 +1,5 @@
 
-let jsonResponse = 6;
-fetch('/data/recipes.json').then(function (response) {
-return response.json();
-}).then(function (jsonFile) {
-jsonResponse = jsonFile.recipes;
-console.log(jsonResponse);
-})
+
 
 
 const SharedController = {
@@ -23,31 +17,27 @@ const SharedController = {
             properties.push(ingredient);
           }
         }
-        // now join all the properties into one searchable string
 
       }
-       // document.querySelector('.search-input');
-      // textToSearchFor.addEventListener('keyup', function () {
-        if ((properties.join(' ')).indexOf(input) != -1 && input.length>0) {
+        if ((properties.join(' ')).indexOf(input) != -1) {
           results.push(recipe);
-          // console.log(properties[0]);
-          // console.log(properties);
-          // console.log(recipe);
         };
-      // })
 
     }
 return results;
+
 },
 
 getInput: function () {
   const input = document.querySelector('.search-input').value;
-  return input;
+
+    return input;
+
 },
 
-  getAllGenres : function(array) {
+  getAllGenres : function() {
     const genres = new Set();
-    for (recipe of array) {
+    for (recipe of jsonResponse) {
       genres.add(recipe.genre);
     }
     return genres;
@@ -73,6 +63,7 @@ getInput: function () {
 
   searchInput : function (jsonResponse, input) {
     let searchResults = [];
+
     for (recipe of jsonResponse) {
       for (value of Object.values(recipe)) {
         if(typeof value === "object") {
@@ -86,26 +77,49 @@ getInput: function () {
 }
 
 const SharedView = {
+  hamburger : function () {
+    const hamburger = document.querySelector('.fa-bars');
+    hamburger.addEventListener('click', function () {
+      console.log("click");
+      const slideInBox = document.querySelector('.slide-in');
+      const main = document.querySelector('main');
+      if(slideInBox.classList.contains('in')) {
+        slideInBox.classList.remove('in');
+        main.classList.remove('hidden');
+
+      } else {
+      slideInBox.classList.add('in');
+      main.classList.add('hidden');
+    }
+    // TODO: get the slide in box to disappear when you click away from it
+    })
+  },
   navbar: function (response) {
   //Fill large navbar
-    const categoryList = document.querySelector('.nav-cats');
+    const categoryList = document.querySelectorAll('.nav-cats');
+    for (list of categoryList) {
     const genres = SharedController.getAllGenres(response);
     // create category buttons
     for (genre of genres) {
       const category = document.createElement('li');
       category.classList = "cat";
       category.innerHTML = '<span class="genre-name">' + genre + '</span><div class="genre-recipes"></div>';
-      categoryList.appendChild(category);
+      list.appendChild(category);
     }
     const about = document.createElement('li');
     about.classList =  "cat";
     about.innerHTML = '<span class="genre-name">About Me</span><div class="genre-recipes"></div>';
-    categoryList.appendChild(about);
-  },
+    list.appendChild(about);
+    const contact = document.createElement('li');
+    contact.classList =  "cat";
+    contact.innerHTML = '<span class="genre-name">Contact</span><div class="genre-recipes"></div>';
+    list.appendChild(contact);
+  }
+},
 
 // on hover, show recipes that match category name
   navbarHover: function(response) {
-    const categoryBoxes = document.querySelectorAll('.cat');
+    const categoryBoxes = document.querySelectorAll('.large-screen-nav .cat');
     for (category of categoryBoxes) {
       const genreName = category.querySelector('.genre-name');
       const recipeBox = category.querySelector('.genre-recipes');
@@ -157,28 +171,30 @@ searchInOut : function search() {
   exit.addEventListener('click', function () {
     searchWindow.classList.remove('in');
     document.querySelector('#search-results-number').innerText = "0";
-    document.querySelector('.search-results-area').innerHTML = "";
-    document.querySelector('.search-input').value = '';
+    document.querySelector('.search-results-area').innerText = '';
+    if (document.querySelector('.search-input').value) {
+      document.querySelector('.search-input').value = '';
+    }
   })
 },
 
 fillResults : function () {
-  const searchInput = document.querySelector('.search-input');
-  console.log(searchInput);
-  searchInput.addEventListener('keyup', function () {
-    const results = SharedController.search(jsonResponse,SharedController.getInput());
-    const resultSection = document.querySelector('.search-results-area');
-    resultSection.innerHTML = '';
-    const numOfResults = document.querySelector('#search-results-number');
-    numOfResults.innerText = results.length;
-    for (result of results) {
-      const resultBox = document.createElement('div');
-      resultBox.className = "result-box";
-      resultBox.innerHTML = '<img src="img/'+result.id+'.jpg" width="50px" height="50px"><div>'+result.name+'</div>';
-      resultSection.appendChild(resultBox);
-      console.log(result.name);
+  const results = SharedController.search(jsonResponse,SharedController.getInput());
+  const resultSection = document.querySelector('.search-results-area');
+  const numOfResults = document.querySelector('#search-results-number');
+  numOfResults.innerText = results.length;
+  resultSection.innerHTML = '';
+
+  for (result of results) {
+    const resultBox = document.createElement('div');
+    resultBox.className = "result-box";
+    resultBox.innerHTML = '<img src="img/'+result.id+'.jpg" width="50px" height="50px"><div>'+result.name+'</div>';
+    resultSection.appendChild(resultBox);
   }
-})
+  if (document.querySelector('.search-input').value.length === 0) {
+    resultSection.innerHTML = '';
+    numOfResults.innerText = 0;
+  }
 }
 //
 //   // let toSearch = userInput.value;
@@ -191,5 +207,36 @@ fillResults : function () {
 
 
 console.log("shared sheet is linked and operating");
-SharedView.navbar(jsonResponse);
-SharedView.navbarHover(jsonResponse);
+
+let jsonResponse = 6;
+fetch('/data/recipes.json').then(function (response) {
+return response.json();
+}).then(function (jsonFile) {
+jsonResponse = jsonFile.recipes;
+}).then(function () {
+  SharedView.hamburger();
+  SharedView.navbar(jsonResponse);
+  SharedView.navbarHover(jsonResponse);
+  SharedView.tooltip();
+  SharedView.searchInOut();
+  SharedController.getAllGenres(jsonResponse.recipes);
+  if (View.fillMain(jsonResponse,4,1)) {
+    View.fillMain(jsonResponse,4,1);
+  };
+  if (View.fillTrending(jsonResponse)){
+    View.fillTrending(jsonResponse);
+  };
+  if (View.fillFeatured(jsonResponse,5,1)) {
+    View.fillFeatured(jsonResponse,5,1);
+  };
+  if (View.fillMain(jsonResponse,8,2)) {
+    View.fillMain(jsonResponse,8,2);
+
+  };
+  if (View.fillFeatured(jsonResponse,9,2)) {
+    View.fillFeatured(jsonResponse,9,2);
+  };
+});
+
+const searchText = document.querySelector('.search-input');
+searchText.addEventListener('keyup', SharedView.fillResults)
