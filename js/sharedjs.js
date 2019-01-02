@@ -130,10 +130,6 @@ const SharedView = {
     about.classList =  "cat";
     about.innerHTML = '<a href="./about.html"><span class="genre-name">About Me</span></a>';
     list.appendChild(about);
-    const contact = document.createElement('li');
-    contact.classList =  "cat";
-    contact.innerHTML = '<a href="./contact.html"><span class="genre-name">Contact</span></a>';
-    list.appendChild(contact);
   }
 },
 
