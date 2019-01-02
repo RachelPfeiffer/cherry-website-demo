@@ -1,15 +1,8 @@
-a:visited {
-  color: #eaeaea;
-  }
-
-a:active {
-  color: #eaeaea;
-}
-
 .recipe-header {
   display: flex;
   flex-wrap: wrap;
-  height: 75vh;
+  height: 65vh;
+  margin-top: 50px;
 }
 
 .recipe-image {
@@ -26,7 +19,6 @@ a:active {
 .recipe-basic-info {
   width: 50%;
   margin: auto;
-  margin-left: -1%;
 }
 
 .recipe-genre, .recipe-name, .recipe-description {
@@ -34,9 +26,9 @@ a:active {
 }
 
 .recipe-header .recipe-name {
-  font-size: 2.8em;
+  font-size: 2.6em;
   line-height: 3.5em;
-  margin-top: -1.2em;
+  margin-top: -0.8em;
   margin-bottom: -1.2em;
   font-weight: normal;
 }
@@ -45,32 +37,35 @@ a:active {
   font-family: "playfair display", sans-serif;
   font-size: 1.8em;
   color: #444;
+  font-style:italic;
 }
 
 .recipe-header .recipe-genre {
   font-size: 1em;
   color: #888;
+  text-transform: uppercase;
+  font-family: sans-serif;
 }
 
 .recipe-info-box {
   background-color: #f1f1f1;
-  width: 60%;
-  height: 140px;
+  width: 70%;
+  height: 100px;
   margin: auto;
   margin-top: 2em;
 }
 
 .recipe-info {
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 15px;
+  margin-bottom: 15px;
   font-family: "playfair display", sans-serif;
   font-weight: normal;
 }
 .recipe-info-box div {
-  margin-right: 5%;
+  margin-right: 10%;
   display: inline-flex;
   width: auto;
-  font-size: 16px;
+  font-size: 13px;
 }
 
 .recipe-info-box span {
@@ -80,7 +75,7 @@ a:active {
   display: inline-block;
   width: auto;
   white-space: nowrap;
-  font-size: 22px;
+  font-size: 16px;
 }
 
 .recipe-info-box button {
@@ -90,18 +85,21 @@ a:active {
   text-transform: uppercase;
   white-space: nowrap;
   font-family: "playfair display", sans-serif;
-  font-size: 20px;
+  font-size: 12px;
   font-weight: normal;
-  padding-left: 25px;
-  padding-right: 25px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 7px;
+  padding-bottom: 7px;
   transition: 0.3s ease;
   margin-left: 2%;
   border: none;
 
 }
 
+.recipe-info h1 {
+  font-size: 18px;
+}
 .recipe-info-box button:hover{
   background-color: black;
   color: white;
@@ -120,7 +118,7 @@ margin-right: 5%;
   font-family: "playfair display", sans-serif;
   font-size: 1.5em;
   text-align: center;
-
+  margin-top: 1em;
 }
 
 .recipe-instructions {
@@ -137,6 +135,10 @@ div.ingredient-directions-box {
   font-weight: normal;
 }
 
+.ingredients-box h1, .directions h1 {
+  font-size: 1em;
+}
+
 .ingredients-box {
   text-align: left;
   float: left;
@@ -147,7 +149,7 @@ div.ingredient-directions-box {
 
 
 ul.ingredients {
-  list-style-type: circle;
+  padding-inline-start: 0;
 }
 
 div.directions {
@@ -171,6 +173,7 @@ div.directions ol li {
   line-height: 1.6em;
   margin: auto;
   letter-spacing: 0.03em;
+  padding-bottom: 1em;
 }
 
 .recipe-article br {
@@ -236,7 +239,6 @@ input {
   border-top: none;
   border-right: none;
   border-left: none;
-  color: #ffffff;
   width: 80%;
   margin-left: 10%;
   margin-top: 2.5em;

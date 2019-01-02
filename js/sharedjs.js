@@ -1,8 +1,14 @@
-
-
-
-
 const SharedController = {
+  fillMainPage : function fillMainPage() {
+    fetch('/data/recipes.json').then(function (response) {
+    return response.json();
+    }).then(function (jsonFile) {
+    jsonResponse = jsonFile.recipes;
+    }).then(function () {
+      SharedView.init(jsonResponse);
+      SharedController.getAllGenres(jsonResponse.recipes);
+    });
+  },
 
   search : function (response, input) {
     const results = [];
@@ -17,22 +23,19 @@ const SharedController = {
             properties.push(ingredient);
           }
         }
-
       }
+      // if search text is found in the list of properties, return that as results
         if ((properties.join(' ')).indexOf(input) != -1) {
           results.push(recipe);
         };
-
-    }
+    };
 return results;
 
 },
 
 getInput: function () {
   const input = document.querySelector('.search-input').value;
-
     return input;
-
 },
 
   getAllGenres : function() {
@@ -42,7 +45,6 @@ getInput: function () {
     }
     return genres;
   },
-
 
   splitIntoWords : function (array) {
     let words = [];
@@ -77,22 +79,40 @@ getInput: function () {
 }
 
 const SharedView = {
+  init : function (jsonResponse) {
+    SharedView.hamburger();
+    SharedView.navbar(jsonResponse);
+    SharedView.navbarHover(jsonResponse);
+    SharedView.topButton();
+    SharedView.tooltip();
+    SharedView.searchInOut();
+    SharedView.runSearch();
+  },
+
   hamburger : function () {
     const hamburger = document.querySelector('.fa-bars');
-    hamburger.addEventListener('click', function () {
-      console.log("click");
-      const slideInBox = document.querySelector('.slide-in');
-      const main = document.querySelector('main');
-      if(slideInBox.classList.contains('in')) {
-        slideInBox.classList.remove('in');
-        main.classList.remove('hidden');
+    const slideInBox = document.querySelector('.slide-in');
+    const main = document.querySelector('main');
+    // listen for clicks
+    document.addEventListener('click', function (e) {
+      console.log(e.target.classList);
+      // check if slide-in box is showing yet
+        if(slideInBox.classList.contains('in')) {
+          // if the user clicks the burger or an empty spot, make the slide-in disappear
+          if (e.target.classList.contains('fa-bars') || e.target.classList.value === "") {
+            slideInBox.classList.remove('in');
+            main.classList.remove('hidden');
+        }
+      } else if (e.target.classList.contains('fa-bars')) {
+        console.log("clicked that burger");
+        slideInBox.classList.add('in');
+        main.classList.add('hidden');
+      };
+    });
 
-      } else {
-      slideInBox.classList.add('in');
-      main.classList.add('hidden');
-    }
-    // TODO: get the slide in box to disappear when you click away from it
-    })
+
+    // TODO: get the slide in box to disappear when you click awa
+
   },
   navbar: function (response) {
   //Fill large navbar
@@ -103,16 +123,16 @@ const SharedView = {
     for (genre of genres) {
       const category = document.createElement('li');
       category.classList = "cat";
-      category.innerHTML = '<span class="genre-name">' + genre + '</span><div class="genre-recipes"></div>';
+      category.innerHTML = '<a href="./category-page.html?id='+genre+'"><span class="genre-name">' + genre + '</span></a><div class="genre-recipes"></div>';
       list.appendChild(category);
     }
     const about = document.createElement('li');
     about.classList =  "cat";
-    about.innerHTML = '<span class="genre-name">About Me</span><div class="genre-recipes"></div>';
+    about.innerHTML = '<a href="./about.html"><span class="genre-name">About Me</span></a>';
     list.appendChild(about);
     const contact = document.createElement('li');
     contact.classList =  "cat";
-    contact.innerHTML = '<span class="genre-name">Contact</span><div class="genre-recipes"></div>';
+    contact.innerHTML = '<a href="./contact.html"><span class="genre-name">Contact</span></a>';
     list.appendChild(contact);
   }
 },
@@ -127,7 +147,8 @@ const SharedView = {
       const recipeBoxCat = document.createElement('h1');
       recipeBoxCat.innerText = genreName.innerText;
       recipeBoxCat.className = 'genre-box-name';
-      recipeBox.appendChild(recipeBoxCat);
+      if (recipeBox) {
+        recipeBox.appendChild(recipeBoxCat);
 
       // put a recipe section in the hover box
       const recipeSection = document.createElement('div');
@@ -142,6 +163,7 @@ const SharedView = {
           recipeSection.appendChild(hoverRecipeBox);
         };
       }
+    }
     }
   },
 
@@ -160,13 +182,23 @@ const SharedView = {
 },
 
 searchInOut : function search() {
-  const magnifyer = document.querySelector('.fa-search');
+  const magnifyers = document.querySelectorAll('.fa-search');
+  const footerSearch = document.querySelector('.search.name')
   const searchWindow = document.querySelector('#search-box');
   const exit = document.querySelector('.fa-times.search');
 
-  magnifyer.addEventListener('click', function () {
+  for(magnifyer of magnifyers) {
+    magnifyer.addEventListener('click', function () {
+      searchWindow.classList.add('in');
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    });
+  }
+  footerSearch.addEventListener('click', function () {
     searchWindow.classList.add('in');
-  });
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  })
 
   exit.addEventListener('click', function () {
     searchWindow.classList.remove('in');
@@ -175,6 +207,21 @@ searchInOut : function search() {
     if (document.querySelector('.search-input').value) {
       document.querySelector('.search-input').value = '';
     }
+  })
+},
+
+runSearch : function () {
+  // run search functionality
+  const searchText = document.querySelector('.search-input');
+  searchText.addEventListener('keyup', SharedView.fillResults)
+},
+
+topButton : function () {
+  // scroll back to top when click the top button in the footer
+  const topButton = document.querySelector('.top');
+  topButton.addEventListener('click', function () {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
   })
 },
 
@@ -188,7 +235,7 @@ fillResults : function () {
   for (result of results) {
     const resultBox = document.createElement('div');
     resultBox.className = "result-box";
-    resultBox.innerHTML = '<img src="img/'+result.id+'.jpg" width="50px" height="50px"><div>'+result.name+'</div>';
+    resultBox.innerHTML = '<a href="./recipe.html?id='+result.id+'"><img src="img/'+result.id+'.jpg" width="50px" height="50px"><div>'+result.name+'</div></a>';
     resultSection.appendChild(resultBox);
   }
   if (document.querySelector('.search-input').value.length === 0) {
@@ -196,47 +243,9 @@ fillResults : function () {
     numOfResults.innerText = 0;
   }
 }
-//
-//   // let toSearch = userInput.value;
-// // let  infoToSearchThrough = stuff.recipes;
-
-// });
-//
 
 }
 
-
-console.log("shared sheet is linked and operating");
-
+// Fill all shared functionality
 let jsonResponse = 6;
-fetch('/data/recipes.json').then(function (response) {
-return response.json();
-}).then(function (jsonFile) {
-jsonResponse = jsonFile.recipes;
-}).then(function () {
-  SharedView.hamburger();
-  SharedView.navbar(jsonResponse);
-  SharedView.navbarHover(jsonResponse);
-  SharedView.tooltip();
-  SharedView.searchInOut();
-  SharedController.getAllGenres(jsonResponse.recipes);
-  if (View.fillMain(jsonResponse,4,1)) {
-    View.fillMain(jsonResponse,4,1);
-  };
-  if (View.fillTrending(jsonResponse)){
-    View.fillTrending(jsonResponse);
-  };
-  if (View.fillFeatured(jsonResponse,5,1)) {
-    View.fillFeatured(jsonResponse,5,1);
-  };
-  if (View.fillMain(jsonResponse,8,2)) {
-    View.fillMain(jsonResponse,8,2);
-
-  };
-  if (View.fillFeatured(jsonResponse,9,2)) {
-    View.fillFeatured(jsonResponse,9,2);
-  };
-});
-
-const searchText = document.querySelector('.search-input');
-searchText.addEventListener('keyup', SharedView.fillResults)
+SharedController.fillMainPage();

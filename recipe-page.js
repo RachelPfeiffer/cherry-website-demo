@@ -95,9 +95,10 @@ slideInBox : function () {
       slideBox.classList.remove('in');
     }
   })
-const xButton = document.querySelector('.fa-times');
+const xButton = document.querySelector('.more-recipes .fa-times');
   xButton.addEventListener('click', function () {
     slideBox.classList.add('hidden');
+    console.log("hiding something from ya");
   })
 }
 
@@ -107,9 +108,14 @@ const xButton = document.querySelector('.fa-times');
 // Controller:
 const Controller = {
   init : function () {
-    View.init();
-    Model.init();
-  },
+      fetch('/data/recipes.json').then(function (response) {
+      return response.json();
+      }).then(function (jsonFile) {
+      data = jsonFile.recipes;
+      }).then(function () {
+    View.init(data);
+  });
+},
   getRecipeID : function getRecipeID() {
     const twoLists = window.location.href.split('html?id=');
     const recipeID = twoLists[1];
@@ -118,7 +124,7 @@ const Controller = {
 
   getRecipe : function getRecipe() {
     var result = this.getRecipeID();
-    return jsonResponse[result];
+    return data[result];
     //(this.getRecipeID());
   },
 
@@ -155,15 +161,6 @@ const Controller = {
   }
 }
 
-    // static getRecipe(e) {
-      // const recipeObject = (response.recipes.filter(function (e) {
-        // return e.id ===
-      // }))
-    // }
-//get recipe object using recipe id
-    // var recipeObject = (response.recipes.filter(function(e) {
-      // return e.id == recipeID;
-    // }))[0];
 //change page title to first recipe name
 function fillRecipePage(response) {
   //get recipe id from url
@@ -172,3 +169,6 @@ function fillRecipePage(response) {
 //put in an image of the recipe
   // document.body.innerHTML = '<h1>'+recipeObject.name+'</h1><img src="img/'+recipeObject.id+'.jpg">'
 };
+console.log("Linked page is linked");
+data = 6;
+Controller.init();
