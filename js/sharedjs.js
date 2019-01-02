@@ -139,6 +139,8 @@ const SharedView = {
 
 // on hover, show recipes that match category name
   navbarHover: function(response) {
+    let hoverRecipesToShow = [];
+
     const categoryBoxes = document.querySelectorAll('.large-screen-nav .cat');
     for (category of categoryBoxes) {
       const genreName = category.querySelector('.genre-name');
@@ -155,14 +157,22 @@ const SharedView = {
       recipeSection.className = "hover-recipe-section";
       recipeBox.appendChild(recipeSection);
 
+
+
       for (recipe of response) {
         if (recipe.genre.toUpperCase() === genreName.innerText) {
-          const hoverRecipeBox = document.createElement('div');
-          hoverRecipeBox.innerHTML = '<a class="hover-recipe" href="./recipe.html?id='+recipe.id+'"><img class="hover-pic" src = "img/' + recipe.id + '.jpg"><div class="nav-recipe-name">'+recipe.name+'</div></a>';
-          hoverRecipeBox.className = "hover-recipe";
-          recipeSection.appendChild(hoverRecipeBox);
+
+          hoverRecipesToShow.push(recipe);
         };
+        console.log(hoverRecipesToShow);
       }
+      for (recipe of hoverRecipesToShow.slice(0,3)) {
+        const hoverRecipeBox = document.createElement('div');
+        hoverRecipeBox.innerHTML = '<a class="hover-recipe" href="./recipe.html?id='+recipe.id+'"><img class="hover-pic" src = "img/' + recipe.id + '.jpg"><div class="nav-recipe-name">'+recipe.name+'</div></a>';
+        hoverRecipeBox.className = "hover-recipe";
+        recipeSection.appendChild(hoverRecipeBox);
+      }
+      hoverRecipesToShow = [];
     }
     }
   },

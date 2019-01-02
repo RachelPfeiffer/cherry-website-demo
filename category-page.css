@@ -1,4 +1,41 @@
+main {
+  margin-top: 50px;
+  }
+
 .category-name {
   font-size: 3em;
   font-family: "playfair display", serif;
+  margin-left: 1em;
+  text-transform: capitalize;
+}
+
+.category-recipes {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  color: white;
+  min-height: 300px;
+  grid-gap: 10px;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.category-recipes .recipe-tile {
+  background-color: #383838;
+  background-size: cover;
+  height: 200px;
+}
+
+.recipe-name {
+  margin-top: 25%;
+  text-align: center;
+  font-size: 1.3em;
+}
+
+.description {
+  text-align: center;
+  font-size: 0.8em;
+  font-style: italic;
 }

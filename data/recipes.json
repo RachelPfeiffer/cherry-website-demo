@@ -129,6 +129,57 @@
     "difficulty" : "advanced",
     "ingredients" : ["7 oz chocolate", "7 eggs", "1 cup sugar", "1 cup margarine"],
     "trending" : false
+  },
+
+  {
+      "id" : "12",
+      "name" : "apple tart",
+      "genre" : "dessert",
+      "description" : "healthy dessert",
+      "servings" : 10,
+      "time" : "1 hour",
+      "difficulty" : "intermediate",
+      "ingredients" : ["10 oz flaky dough", "4 apples", "1/2 cup sugar"],
+      "trending" : false
+  },
+
+  {
+
+      "id" : "13",
+      "name" : "caramel custard",
+      "genre" : "dessert",
+      "description" : "for when your mother-in-law comes",
+      "servings" : 6,
+      "time" : "2 hours",
+      "difficulty" : "advanced",
+      "ingredients" : ["1/2 cup sugar", "7 eggs", "magic wand", "blow torch"],
+      "trending" : false
+  },
+
+  {
+
+      "id" : "14",
+      "name" : "Strawberries and Cream Delight",
+      "genre" : "dessert",
+      "description" : "dreamy summer dessert",
+      "servings" : 8,
+      "time" : "30 minutes",
+      "difficulty" : "beginner",
+      "ingredients" : ["8 oz whipped cream", "2 cups fresh strawberries (no bugs)"],
+      "trending" : false
+  },
+
+  {
+
+      "id" : "15",
+      "name" : "ice cream sundaes",
+      "genre" : "dessert",
+      "description" : "a delicious showstopper",
+      "servings" : 8,
+      "time" : "25 minutes",
+      "difficulty" : "beginner",
+      "ingredients" : ["1 quart vanilla ice cream", "1/2 cup chocolate syrup", "1/2 cup whipped cream", "8 maraschino cherries"],
+      "trending" : false
   }
 ]
 }
