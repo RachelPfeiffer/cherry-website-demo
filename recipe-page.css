@@ -1,13 +1,13 @@
 .recipe-header {
   display: flex;
   flex-wrap: wrap;
-  height: 65vh;
-  margin-top: 50px;
+  height: 45vh;
+  min-height: 50vw;
 }
 
 .recipe-image {
-  width: 50%;
-  max-width: 50%;
+  width: 60%;
+  max-width: 65%;
   height: 100%;
 }
 
@@ -17,7 +17,7 @@
 }
 
 .recipe-basic-info {
-  width: 50%;
+  width: 30%;
   margin: auto;
 }
 
@@ -26,7 +26,7 @@
 }
 
 .recipe-header .recipe-name {
-  font-size: 2.6em;
+  font-size: 1.7em;
   margin-top: 0;
   font-weight: normal;
 }
@@ -37,6 +37,7 @@
   color: #444;
   font-style:italic;
   margin-top: -1em;
+  display: none;
 }
 
 .recipe-header .recipe-genre {
@@ -48,33 +49,32 @@
 
 .recipe-info-box {
   background-color: #f1f1f1;
-  width: 70%;
-  height: 100px;
+  width: 100%;
+  /* height: 70px; */
   margin: auto;
   margin-top: 2em;
 }
 
 .recipe-info {
-  margin-top: 15px;
   margin-bottom: 15px;
   font-family: "playfair display", sans-serif;
   font-weight: normal;
 }
 .recipe-info-box div {
-  margin-right: 10%;
-  display: inline-flex;
-  width: auto;
+  display: block;
+  width: 100%;
   font-size: 13px;
+  text-align: center;
 }
 
 .recipe-info-box span {
   margin-top: auto;
   margin-bottom: auto;
-  margin-left: 8px;
+  margin-left: -8px;
   display: inline-block;
   width: auto;
   white-space: nowrap;
-  font-size: 16px;
+  font-size: 13px;
 }
 
 .recipe-info-box button {
@@ -84,20 +84,20 @@
   text-transform: uppercase;
   white-space: nowrap;
   font-family: "playfair display", sans-serif;
-  font-size: 12px;
-  font-weight: normal;
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 7px;
   padding-bottom: 7px;
   transition: 0.3s ease;
   margin-left: 2%;
-  border: none;
+  height: 45px;
 
 }
 
-.recipe-info h1 {
-  font-size: 18px;
+.recipe-info-box h1 {
+  font-size: 14px;
+  display: inline-block;
+  margin: 1em;
 }
 .recipe-info-box button:hover{
   background-color: black;
@@ -112,12 +112,17 @@ margin-left: 5%;
 margin-right: 5%;
 }
 
+.recipe-info span {
+  margin-right: 5%;
+}
+
 .description {
   margin: auto;
   font-family: "playfair display", sans-serif;
-  font-size: 1.5em;
+  font-size: 1.3em;
   text-align: center;
   margin-top: 1em;
+  width: 90%;
 }
 
 .recipe-instructions {
@@ -128,10 +133,12 @@ margin-right: 5%;
 div.ingredient-directions-box {
   margin: 2em auto;
   display: flex;
+  flex-wrap: wrap;
   max-width: 900px;
-  width: 60%;
+  width: 100%;
   font-family: "playfair display", serif;
   font-weight: normal;
+  margin-left: 5%;
 }
 
 .ingredients-box h1, .directions h1 {
@@ -142,13 +149,21 @@ div.ingredient-directions-box {
   text-align: left;
   float: left;
   height: 100%;
-  width: 30%;
+  width: 100%;
   font-size: 1.3em;
 }
 
 
-ul.ingredients {
-  padding-inline-start: 0;
+.ingredients li {
+  list-style-type: circle;
+}
+
+.directions li {
+  font-size: 0.8em;
+}
+
+.ingredients li {
+  font-size: 1.3em;
 }
 
 div.directions {
@@ -156,18 +171,20 @@ overflow: hidden;
 text-align: left;
 display: block;
 float: right;
-width: 70%;
-letter-spacing: 1.2;
+width: 100%;
 font-size: 1.3em;
 }
 
 div.directions ol li {
   margin-bottom: 1em;
+  list-style-type: decimal;
+  padding-inline-start: 10px;
+  margin-right: 15%;
 }
 
 .recipe-article {
-  width: 60%;
-  font-size: 1.3em;
+  width: 90%;
+  font-size: 1em;
   font-family: "playfair display", serif;
   line-height: 1.6em;
   margin: auto;
@@ -181,7 +198,7 @@ div.directions ol li {
 blockquote {
   font-weight: bold;
   font-size: 2em;
-  width: 40%;
+  width: 100%;
   margin: 2em auto;
   float: left;
   border-bottom: 1px solid maroon;
@@ -199,6 +216,10 @@ blockquote {
   right: -500px;
   z-index: 10;
   transition: 1s ease;
+}
+
+.enter-email span {
+  font-size: 12px;
 }
 .hidden {
   display: none;
@@ -241,6 +262,7 @@ input {
   width: 80%;
   margin-left: 10%;
   margin-top: 2.5em;
+  color: white;
 }
 
 input::placeholder {
@@ -284,4 +306,89 @@ span.terms {
 
 .in {
   opacity: 1;
+}
+
+@media only screen and (min-width: 550px) {
+  /* get directions and ingredients next to each other */
+  .ingredients-box {
+    width: 30%;
+  }
+
+  div.directions {
+    width: 60%;
+
+  }
+
+  .recipe-info-box div {
+    display: inline;
+        font-size: 13px;
+  }
+
+  blockquote {
+    width: 40%;
+    max-width: 240px;
+  }
+
+  .recipe-article {
+    max-width: 900px;
+  }
+}
+@media only screen and (min-width: 600px) {
+.recipe-header {
+    height: 55vh;
+    margin-top: 50px;
+  }
+  .recipe-header .recipe-name {
+font-size: 2em;
+}
+
+.recipe-basic-info {
+  width: 45%;
+}
+
+.recipe-image {
+  width: 50%;
+  max-width: 50%;
+  height: 100%;
+}
+
+.recipe-info-box div {
+}
+
+
+.recipe-header .recipe-description {
+display: block;
+}
+
+}
+
+  @media only screen and (min-width: 750px) {
+
+    .recipe-header .recipe-name {
+      font-size: 2.6em;
+    }
+
+    .recipe-info-box div {
+      margin-right:6%;
+      line-height: 90px;
+    }
+
+    .recipe-info-box {
+      background-color: #f1f1f1;
+      height: 100px;
+}
+
+.recipe-info {
+  margin-top: 15px;
+}
+
+.recipe-info-box button {
+  height: 70px;
+  margin-left: -3%;
+}
+}
+
+@media only screen and (min-width: 910px) {
+.recipe-info-box {
+}
 }
