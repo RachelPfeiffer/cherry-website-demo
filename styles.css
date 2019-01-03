@@ -394,7 +394,7 @@ display: block;
   .section1.recipes {
     margin: auto;
     grid-gap: 6%;
-    max-width: 930px;
+    max-width: 870px;
   }
 
   div.trending-recipes.main-page {
