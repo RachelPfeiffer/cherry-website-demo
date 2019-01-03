@@ -203,6 +203,10 @@ font-family: "playfair display", serif;
   visibility: visible;
 }
 
+.large-screen-nav .nav-cats .nav-cat a {
+  color: navy;
+}
+
 .genre-box-name {
   border-top: 4px grey solid;
   margin-top: -3px;
