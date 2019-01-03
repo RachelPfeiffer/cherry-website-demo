@@ -2,7 +2,7 @@ console.log("mainpage is linked and operating");
 
 const View = {
   init : function () {
-    fetch('creme-website-demo/data/recipes.json').then(function (response) {
+    fetch('/data/recipes.json').then(function (response) {
     return response.json();
     }).then(function (jsonFile) {
     data = jsonFile.recipes;
