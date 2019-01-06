@@ -1,6 +1,6 @@
 const SharedController = {
   fillMainPage : function fillMainPage() {
-    fetch('/data/recipes.json').then(function (response) {
+    fetch('https://rachelpfeiffer.github.io/creme-website-demo/').then(function (response) {
     return response.json();
     }).then(function (jsonFile) {
     jsonResponse = jsonFile.recipes;
