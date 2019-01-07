@@ -14,17 +14,6 @@ h2 {
   display: inline;
 }
 
-.about-me-box a {
-  color: blue;
-}
-
-.about-me-box a:hover {
-  color: purple;
-}
-
-.about-me-box a:visited {
-  color: navy;
-}
 
 .me-pic {
   width: 25%;
@@ -36,7 +25,7 @@ h2 {
     }
 
     .about-creme-box {
-      background-color: #202020;
+      background-color: #7a0b20;
       float: right;
       height: 100vh;
       margin-top: 10px;

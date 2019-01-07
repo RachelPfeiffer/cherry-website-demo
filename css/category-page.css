@@ -31,11 +31,15 @@ header div.fas.fa-search {
 }
 
 .category-recipes .recipe-tile {
-  background-color: #383838;
+  background-color: #7a0b20;
   background-size: cover;
   height: 200px;
+  border-radius: 5px;
 }
 
+.category-recipes .recipe-tile:visited {
+  background-color: #7a0b20;
+}
 .recipe-name {
   margin-top: 25%;
   text-align: center;

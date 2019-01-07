@@ -6,11 +6,13 @@ html {
 
 body,td,th,p {
   	font-family: "playfair display", sans-serif, sans-serif;
-  	color: #333;
+  	color: #7a0b20;
   }
 
 body {
-  	background-color: #fdfdfd;
+  	background-color:
+#ffe8ec
+;
   	margin: 0;
   	position: relative;
     overflow-x: hidden;
@@ -41,7 +43,9 @@ body {
   }
 
   #maincontent {
-    background-color: #f3f3f3;
+    background-color:
+#ffe8ec
+;
     min-height: 100%;
     max-width: 100vw;
   }
@@ -56,7 +60,7 @@ header {
 /*--------------Black Header---------------------------*/
 .black-header {
   width: 100%;
-  background-color: #1C1D1E;
+  background-color: #7a0b20;
   height: 70px;
   display: flex;
 }
@@ -64,7 +68,9 @@ header {
 /*-------------Header icons-------------------------*/
 
 .fa-search {
-  color: #ffffff;
+  color:
+#ffe8ec
+;
 }
 
 .header-search-trending {
@@ -82,12 +88,12 @@ h1.main-logo {
   font-size: 3em;
   font-weight: lighter;
   font-family: georgia times new roman;
-  color: #EAEAEA;
+  color: white;
   text-align: center;
 }
 
 a.main-logo:hover, a.main-logo:active, a.main-logo:visited {
-  color: #eaeaea;
+  color: white;
   text-decoration: none;
 }
 
@@ -96,7 +102,9 @@ a.main-logo:hover, a.main-logo:active, a.main-logo:visited {
 }
 
 .fas.fa-bars {
-  color: #ffffff;
+  color:
+#ffe8ec
+;
   width: 10vw;
   line-height: 70px;
   margin-right: 5vw;
@@ -118,8 +126,10 @@ a.main-logo:hover, a.main-logo:active, a.main-logo:visited {
 
 .tooltip {
   visibility: hidden;
-  background-color: #111111;
-  color: #F5F5F5;
+  background-color: #873846;
+  color:
+#ffe8ec
+;
   box-shadow: -2px -2px 1px 1px #282828;
   text-align: center;
   border-radius: 6px;
@@ -140,17 +150,21 @@ a.main-logo:hover, .fa-search:hover, .fa-bars:hover, .fa-fire:hover, .slogan:hov
 .fa-instagram:hover, .fa-twitter:hover, .nav-sections li:hover, .fa-facebook-f:hover,
 .fa-youtube-square:hover {
   cursor: pointer;
-  color: #ffffff;
+  color: inherit;
 }
 
 div.fab.fa-facebook-f, div.fab.fa-twitter{
-  color: #ffffff;
+  color:
+#ffe8ec
+;
   }
 
 .fa-instagram:active,
 .fa-twitter:active,
 .fa-facebook-f:active {
-  color: #ffffff;
+  color:
+#ffe8ec
+;
 }
 /* ------------------------ large screen nav bar ================*/
 
@@ -160,8 +174,10 @@ div.fab.fa-facebook-f, div.fab.fa-twitter{
 }
 
 .large-screen-nav {
-  background-color: #fff;
-  color: #2F4F4F;
+  background-color:
+#ffe8ec
+;
+  color: #7a0b20;
   height: 50px;
   width: 100%;
   border-bottom: 1px solid #eaeaea;
@@ -185,7 +201,7 @@ li.cat {
 }
 
 .cat a {
-  color: #2f4f4f;
+  color: #873846;
 }
 
 .genre-recipes {
@@ -198,7 +214,7 @@ padding-top: 1.5em;
 position: absolute;
 top: 16em;
 left: 15%;
-	background: linear-gradient(to bottom, white 0%, white 1.6em, #f0f0f0 1.6em, #f0f0f0 100%);
+	background: linear-gradient(to bottom, white 0%, white 1.6em, #db2e50 1.6em, #db2e50 100%);
 font-family: "playfair display", serif;
 }
 
@@ -206,9 +222,6 @@ font-family: "playfair display", serif;
   visibility: visible;
 }
 
-.large-screen-nav .nav-cats .nav-cat a {
-  color: navy;
-}
 
 .genre-box-name {
   border-top: 4px grey solid;
@@ -262,7 +275,7 @@ font-family: "playfair display", serif;
   margin: 15px auto;
   text-align: left;
   background-color: rgb(47,79,79, 0.2);
-  color: #2F4F4F;
+  color: #db2e50;
 }
 .result-box a {
   display: flex;
@@ -377,7 +390,7 @@ visibility: visible;
   /* ======================== Footer ======================== */
   footer {
   	text-transform: uppercase;
-  	background-color: #444;
+  	background-color: #873846;
   	padding: 25px;
   	letter-spacing: 1px;
   	text-align: center;
@@ -428,7 +441,7 @@ visibility: visible;
     border-radius: 50px;
     padding: 10px;
     color: white;
-    background-color: grey;
+    background-color: #7a0b20;
     text-transform: uppercase;
   }
 
@@ -557,7 +570,7 @@ main.hidden {
 width: 100%;
 text-align: center;
 height: 70px;
-background-color: #61615f;
+background-color: #873846;
 line-height: 70px;
 font-size: 2.3em;
 }
@@ -604,13 +617,13 @@ font-size: 2.3em;
   }
     .black-header {
       height: 180px;
-      background-color: #0A0A0A;
+      background-color: #7a0b20;
       background-repeat: no-repeat;
     }
 
     .header.social-media, .header-search-trending {
       display: inline-block;
-      color: #E8E8E8;
+      color: #ffe8ec;
     }
 
     .header.social-media{
@@ -638,7 +651,7 @@ font-size: 2.3em;
     }
 
     .slogan {
-      color: #93949B;
+      color: #ddd2d4;
       text-align: center;
       display: block;
       letter-spacing: 1.5px;
@@ -647,7 +660,7 @@ font-size: 2.3em;
     }
 
     .slogan:hover {
-      color: #93949b;
+      color: #ddd2d4;
     }
 
     .header-search-trending {
@@ -658,7 +671,7 @@ font-size: 2.3em;
 
 
     .fa-fire, .fa-instagram {
-      color: #ffffff;
+      color: #ffe8ec;
       opacity: 1;
       margin-left: 1em;
       transition: 1s ease;
