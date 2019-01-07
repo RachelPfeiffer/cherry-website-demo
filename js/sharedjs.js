@@ -147,20 +147,17 @@ const SharedView = {
       recipeBoxCat.className = 'genre-box-name';
       if (recipeBox) {
         recipeBox.appendChild(recipeBoxCat);
-
+      }
       // put a recipe section in the hover box
       const recipeSection = document.createElement('div');
       recipeSection.className = "hover-recipe-section";
       recipeBox.appendChild(recipeSection);
 
-
-
       for (recipe of response) {
-        if (recipe.genre.toUpperCase() === genreName.innerText) {
-
+        if (recipe.genre.toUpperCase() === genreName.innerText.toUpperCase()) {
           hoverRecipesToShow.push(recipe);
+          console.log(recipe);
         };
-        console.log(hoverRecipesToShow);
       }
       for (recipe of hoverRecipesToShow.slice(0,3)) {
         const hoverRecipeBox = document.createElement('div');
@@ -170,7 +167,7 @@ const SharedView = {
       }
       hoverRecipesToShow = [];
     }
-    }
+
   },
 
   tooltip : function tooltip() {

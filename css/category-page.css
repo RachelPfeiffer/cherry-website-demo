@@ -26,6 +26,10 @@ header div.fas.fa-search {
   margin-bottom: 1em;
 }
 
+.category-recipes a {
+  color: white;
+}
+
 .category-recipes .recipe-tile {
   background-color: #383838;
   background-size: cover;

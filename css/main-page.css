@@ -87,6 +87,7 @@ main {
   min-height: 2em;
   margin-top: 0;
   margin-left: 5%;
+  color: #2f4f4f;
 }
 
 .recipe-tile .recipe-name {
@@ -191,6 +192,7 @@ display: block;
 
 .featured .recipe-name {
   font-size: 1em;
+  color: inherit;
 }
 
 .featured .recipe-genre {
