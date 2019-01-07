@@ -6,7 +6,7 @@
 data = 6;
 const Controller = {
   init : function () {
-    fetch('/data/recipes.json').then(function (response) {
+    fetch('https://rachelpfeiffer.github.io/creme-website-demo/data/recipes.json').then(function (response) {
     return response.json();
     }).then(function (jsonFile) {
     data = jsonFile.recipes;

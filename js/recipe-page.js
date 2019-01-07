@@ -108,7 +108,7 @@ const xButton = document.querySelector('.more-recipes .fa-times');
 // Controller:
 const Controller = {
   init : function () {
-      fetch('/data/recipes.json').then(function (response) {
+      fetch('https://rachelpfeiffer.github.io/creme-website-demo/').then(function (response) {
       return response.json();
       }).then(function (jsonFile) {
       data = jsonFile.recipes;
