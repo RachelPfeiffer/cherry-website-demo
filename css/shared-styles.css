@@ -214,8 +214,9 @@ padding-top: 1.5em;
 position: absolute;
 top: 16em;
 left: 15%;
-	background: linear-gradient(to bottom, white 0%, white 1.6em, #db2e50 1.6em, #db2e50 100%);
+	background: linear-gradient(to bottom, #ffe8ec 0%, #ffe8ec 1.6em, #f7d2d8 1.6em, #f7d2d8 100%);
 font-family: "playfair display", serif;
+border-bottom: 1px solid grey;
 }
 
 .large-screen-nav .cat:hover .genre-recipes {
@@ -289,7 +290,7 @@ font-family: "playfair display", serif;
   height: 50px;
   width: 50px;
   border-radius: 10px;
-  border: 1px solid grey;
+  border: 1px solid #873846;
   margin-right: 15px;
 }
 
@@ -359,6 +360,7 @@ visibility: visible;
   height: 3.4em;
   font-size: 2em;
   font-family: "playfair display",  serif;
+   color: #7a0b20;
 }
 
 .search-input::placeholder {
@@ -375,7 +377,7 @@ visibility: visible;
   margin-left: 10%;
   margin-right: 10%;
   text-align: center;
-  color: grey;
+  color: #873846;
   overflow-y: scroll;
   overflow-x: hidden;
   height: 400px;

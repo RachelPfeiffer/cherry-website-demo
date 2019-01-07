@@ -151,7 +151,9 @@ const SharedView = {
       // put a recipe section in the hover box
       const recipeSection = document.createElement('div');
       recipeSection.className = "hover-recipe-section";
-      recipeBox.appendChild(recipeSection);
+      if (recipeBox) {
+        recipeBox.appendChild(recipeSection);
+      }
 
       for (recipe of response) {
         if (recipe.genre.toUpperCase() === genreName.innerText.toUpperCase()) {
