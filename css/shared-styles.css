@@ -465,7 +465,7 @@ visibility: visible;
   .slide-in-navigation {
     color: white;
     list-style-type: none;
-    background-image: url('/img/nav.jpg');
+    background-image: url('https://rachelpfeiffer.github.io/cherry-website-demo/img/nav.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     width: 88vw;
