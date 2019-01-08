@@ -539,7 +539,7 @@ visibility: visible;
   margin-top: -70px;
 }
 
-main.hidden {-+
+main.hidden {
   display: none;
 }
 
