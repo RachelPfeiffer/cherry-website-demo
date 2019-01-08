@@ -2,7 +2,7 @@ console.log("mainpage is linked and operating");
 
 const View = {
   init : function () {
-    fetch('https://rachelpfeiffer.github.io/creme-website-demo/data/recipes.json').then(function (response) {
+    fetch('https://rachelpfeiffer.github.io/cherry-site-demo/data/recipes.json').then(function (response) {
     return response.json();
     }).then(function (jsonFile) {
     data = jsonFile.recipes;
