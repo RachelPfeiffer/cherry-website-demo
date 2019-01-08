@@ -1,3 +1,7 @@
+.main-logo:hover, .main-logo:active, .main-logo:visited {
+  color: inherit;
+  }
+
 main {
   display: flex;
   margin-top: 50px;
@@ -10,6 +14,11 @@ main {
   width: 65%;
 }
 
+.about-me-box p a {
+  color: purple;
+  text-decoration: underline;
+}
+
 h2 {
   display: inline;
 }
@@ -19,6 +28,7 @@ h2 {
   width: 25%;
   height: 30%;
   float: left;
+  padding-right: 10px;
 }
     .about-creme-box {
       display: block;
@@ -73,5 +83,9 @@ h2 {
 
   .about-me-box {
     width: 90%;
+  }
+
+  .about-creme-box {
+    display: none;
   }
 }
