@@ -14,6 +14,7 @@ const Controller = {
       View.init(data);
     });
   },
+
   getCategory : function () {
     const twoLists = window.location.href.split('html?id=');
     const category = twoLists[1];
@@ -50,14 +51,7 @@ const View = {
       recipeTile.href = './recipe.html?id='+entry.id;
       recipeTile.innerHTML = '<div class="recipe-name">'+entry.name+'</div><div class="description">'+entry.description+'</div>';
       const recipeImage = "url('img/"+entry.id+".jpg')";
-      recipeTile.addEventListener('mouseover', function () {
-        recipeTile.style.backgroundImage = recipeImage;
-        console.log(recipeTile);
-      });
-      recipeTile.addEventListener('mouseout', function () {
-        recipeTile.style.backgroundColor = "#383838";
-        recipeTile.style.backgroundImage = "none";
-      })
+      recipeTile.style.backgroundImage = recipeImage;
       recipeGrid.appendChild(recipeTile);
     }
   }
