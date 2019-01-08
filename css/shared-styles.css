@@ -532,18 +532,14 @@ visibility: visible;
 .slide-in.nav {
   height: 100vh;
   width: 86vw;
-<<<<<<< HEAD
   background-image: url('/img/nav.jpg');
-=======
-  background-image: url('img/na.jpeg');
->>>>>>> 2ba7153871ddc054f62a6df183c48323a21ea3b1
   background-size: cover;
   z-index: 5;
   display: none;
   margin-top: -70px;
 }
 
-main.hidden {
+main.hidden {-+
   display: none;
 }
 
