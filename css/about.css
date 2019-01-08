@@ -26,6 +26,7 @@ h2 {
 
 .me-pic {
   width: 25%;
+  min-width: 200px;
   height: 30%;
   float: left;
   padding-right: 10px;
