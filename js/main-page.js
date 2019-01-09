@@ -7,10 +7,10 @@ const View = {
     }).then(function (jsonFile) {
     data = jsonFile.recipes;
     }).then(function () {
-    View.fillMain(data,4,3,1);
+    View.fillMain(data,9,3,1);
     View.fillTrending(data);
     View.fillFeatured(data,5,1);
-    View.fillMain(data,8,6,2);
+    View.fillMain(data,8,8,2);
     View.fillFeatured(data,9,2);
   });
   },

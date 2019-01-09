@@ -101,6 +101,12 @@ a.main-logo:hover, a.main-logo:active, a.main-logo:visited {
   display: none;
 }
 
+img.cherry {
+  position: absolute;
+  top: 5px;
+  left: 60%;
+}
+
 .fas.fa-bars {
   color:
 #ffe8ec
@@ -208,16 +214,16 @@ li.cat {
 .genre-recipes {
 width: 70%;
 max-width: 690px;
-height: 310px;
+height: 250px;
 visibility: hidden;
-position: relative;
 padding-top: 1.5em;
 position: absolute;
 top: 16em;
-left: 15%;
-	background: linear-gradient(to bottom, #ffe8ec 0%, #ffe8ec 1.6em, #f7d2d8 1.6em, #f7d2d8 100%);
+left: 20%;
+	background: linear-gradient(to bottom, #ffe8ec 0%, #ffe8ec 1.6em, #873846 1.6em, #873846 100%);
 font-family: "playfair display", serif;
 border-bottom: 1px solid grey;
+border-radius: 10px;
 }
 
 .large-screen-nav .cat:hover .genre-recipes {
@@ -226,6 +232,7 @@ border-bottom: 1px solid grey;
 
 
 .genre-box-name {
+  color: white;
   border-top: 4px grey solid;
   margin-top: -3px;
   padding-left: 10%;
@@ -240,29 +247,31 @@ border-bottom: 1px solid grey;
 
 }
 .hover-pic {
-  width: 100%;
-  height: 170px;
+  width: 80%;
+  height: 100px;
   max-width: 100%;
   max-height: 231px;
   overflow: hidden;
+  margin-left: 10px;
 }
 
 
 .hover-recipe {
-  width: 33%;
+  width: 30%;
   height: 100%;
   max-height: 331px;
   overflow: hidden;
-  margin: 0 5px;
+  margin: 0 7px;
   border-radius: 2px;
 }
 
 .nav-recipe-name {
   width: 100%;
-  font-size: 1.5em;
-  text-transform: capitalize;
+  font-size: 1em;
+  text-transform: uppercase;
   text-align: center;
-  font-weight: lighter;
+  color: white;
+  background-color: #873846;
 
 }
 
@@ -582,6 +591,10 @@ font-size: 2.3em;
   .result-box {
     margin: 5px 10%;
   }
+
+  img.cherry {
+    left: 58%;
+  }
 }
 
 @media only screen and (min-width: 600px) {
@@ -613,7 +626,11 @@ font-size: 2.3em;
 @media only screen and (min-width: 750px) {
   header {
     height: 180px;
-  }k
+  }
+
+  img.cherry {
+    left: 50%;
+  }
 
   main {
     margin-top: 50px;
@@ -630,11 +647,10 @@ font-size: 2.3em;
     }
 
     .header.social-media{
-      width: 12vw;
+      width: 15vw;
       text-align: left;
       line-height: 180px;
-      order: -1;
-      margin-left: 15px;
+      order: 1;
     }
     .header.social-media a {
       padding-right: 10px;
@@ -667,7 +683,7 @@ font-size: 2.3em;
     }
 
     .header-search-trending {
-      order: 3;
+      order: -1;
       line-height: 180px;
     }
 

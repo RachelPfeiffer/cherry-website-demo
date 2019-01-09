@@ -7,6 +7,10 @@ main {
   margin-top: 0;
 }
 
+h1.new-header {
+  display: none;
+}
+
 .recipes {
   width: 100%;
   margin-top: 0;
@@ -42,6 +46,9 @@ main {
   width: 100%;
 }
 
+.latest-header {
+  margin-left: 1em;
+}
 .section2 .recipe-info, .section3 .recipe-info {
   width: calc(75% - 10px);
   padding-top: 1em;
@@ -261,7 +268,6 @@ display: block;
 
   div.image-box {
     height:160px;
-    border-radius: 5px;
   }
 
   .image-box .recipe-image {
@@ -305,17 +311,120 @@ display: block;
       width: 80%;
     }
 
-    .about-creme-box {
-      display: block;
-    }
-
-
 }
 
 @media only screen and (min-width: 685px) {
-  .recipes {
-    grid-template-columns: 1fr 1fr 1fr;
+
+
+    h1.new-header {
+      display: block;
     }
+    .new-header {
+      margin-top: 0.5em;
+      margin-left: 6%;
+      /* border-top: 1px solid #7a0b20; */
+    }
+
+    .trending-about.box {
+      width: 19%;
+      float: left;
+      margin-left: 40px;
+      padding-right: 1em;
+      /* make this section into a sidebar */
+    }
+
+    div.trending-recipes.main-page {
+      /* leave a space between the word trending and the recipes */
+    margin-top: 1em;
+    /* stack the recipes */
+    grid-template-columns: 1fr;
+
+    }
+    a.trending-recipe {
+      /* decrease the margin */
+      margin-left: 5%;
+      overflow: visible;
+      /* put text under instead of next to */
+      display: block;
+    }
+
+    .trending-recipe {
+      height: auto;
+    }
+
+    .trending.recipe-name {
+      line-height: normal;
+      overflow: inherit;
+      white-space: normal;
+      text-align: center;
+      margin-bottom: 1em;
+    }
+
+    .section1.recipes {
+      margin-right: 3%;
+      margin-left: auto;
+      margin-top: 2.5%;
+      border-bottom: 1px solid #7a0b20;
+    }
+
+    .featured.section1 {
+      width: 74%;
+      margin-left: calc(22% + 50px);
+    }
+
+    .about-creme-box {
+      background-color: #7a0b20;
+      margin-top: 10px;
+      margin-right: 3%;
+      color: white;
+      display: block;
+    }
+
+    .about-creme {
+      padding-top: 2em;
+      text-transform: capitalize;
+      text-align: center;
+      margin-top: 2em;
+      margin-bottom: 1em;
+      font-family: monospace;
+      font-size: 1em;
+    }
+
+    .about-text {
+      color: white;
+      margin-right: 20%;
+      margin-left: 20%;
+      margin-top: 2em;
+      text-align: center;
+    }
+    .chef-pic {
+        width: 70%;
+        border-radius: 50px;
+        margin: 20px 15%;
+        box-shadow: 0px 0px 10px 10px white;
+    }
+
+    .cream-pic {
+      width: 60px;
+      height:60px;
+      border-radius: 60px;
+      margin-top: 4em;
+      margin-left: calc(50% - 30px);
+    }
+
+    .recipes.section2 {
+      width: 73%;
+      max-width: 800px;
+    }
+
+    .latest-header {
+          margin-left: calc(22% + 50px);
+    }
+
+    .section2 a.recipe-tile .image-box {
+      width: 100%;
+    }
+
 }
 /* Do not show navbar if view window is less than 780px wide */
 @media only screen and (max-width: 750px) {
@@ -337,6 +446,10 @@ display: block;
   .recipe-tile {
     border: none;
   }
+
+  .trending-section.main-page {
+    top: 10.5%;
+  }
 .featured {
   max-width: 800px;
   margin: auto;
@@ -346,45 +459,9 @@ display: block;
     max-height:300px;
     width: 80%;
   }
-  .about-creme-box {
-    background-color: #7a0b20;
-    float: right;
-    height: 150vh;
-    margin-top: 10px;
-    margin-right: 3%;
-    width: 25%;
-    color: white;
-  }
 
-  .about-creme {
-    text-transform: capitalize;
-    text-align: center;
-    margin-top: 2em;
+  .section2 {
     margin-bottom: 1em;
-    font-family: monospace;
-    font-size: 1em;
-  }
-
-  .about-text {
-    color: white;
-    margin-right: 20%;
-    margin-left: 20%;
-    margin-top: 2em;
-    text-align: center;
-  }
-  .chef-pic {
-      width: 70%;
-      border-radius: 50px;
-      margin: 20px 15%;
-      box-shadow: 0px 0px 10px 10px white;
-  }
-
-  .cream-pic {
-    width: 60px;
-    height:60px;
-    border-radius: 60px;
-    margin-top: 4em;
-    margin-left: calc(50% - 30px);
   }
 
 
@@ -392,7 +469,7 @@ display: block;
 
 @media only screen and (min-width: 850px) {
   div.image-box {
-    height: 250px;
+    height: 200px;
   }
   .section1.recipes {
     margin: auto;
@@ -400,10 +477,15 @@ display: block;
     max-width: 870px;
   }
 
-  div.trending-recipes.main-page {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    margin: 0;
+  .new {
+    max-width: 870px;
+    margin: auto;
   }
+
+  .trending-featured.box {
+    margin-top: 1em;
+  }
+
 }
 
 @media only screen and (min-width: 920px) {
@@ -414,4 +496,23 @@ display: block;
 .about-creme-box {
   height: 90vh;
 }
+
+.recipes.section2 {
+  width: 73%;
+  border-bottom: 1px solid #7a0b20;
+  margin-bottom: 1em;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.recipes.section2 .recipe-name {
+  max-width: 90%;
+}
+
+.featured.section1 {
+  width: 76%;
+  margin-right: 1.6em;
+  margin-left: calc(19% + 50px);
+
+}
+
 }
