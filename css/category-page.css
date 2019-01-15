@@ -38,6 +38,9 @@ header div.fas.fa-search {
 
 .category-recipes .recipe-tile:hover {
   background-color: #7a0b20;
+  /* sorry, but since the background image is an inline-style, it will trump this unless we !important */
+  background-image: none !important;
+
 }
 .recipe-name {
   margin-top: 25%;

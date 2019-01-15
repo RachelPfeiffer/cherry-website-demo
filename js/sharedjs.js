@@ -158,7 +158,6 @@ const SharedView = {
       for (recipe of response) {
         if (recipe.genre.toUpperCase() === genreName.innerText.toUpperCase()) {
           hoverRecipesToShow.push(recipe);
-          console.log(recipe);
         };
       }
       for (recipe of hoverRecipesToShow.slice(0,3)) {
