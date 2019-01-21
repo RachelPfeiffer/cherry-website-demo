@@ -11,6 +11,9 @@ const SharedController = {
   },
 
   search : function (response, input) {
+    const toCheck = [];
+    const words = input.split(' ');
+    toCheck.push(words);
     const results = [];
     // for each recipe object
     for (recipe of response) {
@@ -18,19 +21,22 @@ const SharedController = {
       const properties = Object.values(recipe);
       // split the ingredients into a separate list of strings
       for (property of properties) {
-        if (typeof property === "object") {
-          for (ingredient of property) {
-            properties.push(ingredient);
-          }
+          if (typeof property === "object") {
         }
       }
       // if search text is found in the list of properties, return that as results
-        if ((properties.join(' ')).indexOf(input) != -1) {
-          results.push(recipe);
+      for (word of words) {
+        if ((properties.join(' ')).indexOf(word) != -1) {
+          if (results.indexOf(recipe) === -1) {
+            results.push(recipe);
+          }
         };
-    };
-return results;
+      }
 
+    };
+if (results.length !== 16) {
+  return results;
+}
 },
 
 getInput: function () {
@@ -95,7 +101,6 @@ const SharedView = {
     const main = document.querySelector('main');
     // listen for clicks
     document.addEventListener('click', function (e) {
-      console.log(e.target.classList);
       // check if slide-in box is showing yet
         if(slideInBox.classList.contains('in')) {
           // if the user clicks the burger or an empty spot, make the slide-in disappear

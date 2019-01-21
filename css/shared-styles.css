@@ -152,11 +152,15 @@ img.cherry {
   visibility: visible;
 }
 
-a.main-logo:hover, .fa-search:hover, .fa-bars:hover, .fa-fire:hover, .slogan:hover,
+a.main-logo:hover, .fa-search:hover, .fa-fire:hover, .slogan:hover,
 .fa-instagram:hover, .fa-twitter:hover, .nav-sections li:hover, .fa-facebook-f:hover,
 .fa-youtube-square:hover {
   cursor: pointer;
   color: inherit;
+}
+
+.fa-bars:hover {
+  cursor: pointer;
 }
 
 div.fab.fa-facebook-f, div.fab.fa-twitter{

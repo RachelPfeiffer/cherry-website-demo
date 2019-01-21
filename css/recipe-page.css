@@ -1,8 +1,6 @@
 .recipe-header {
   display: flex;
   flex-wrap: wrap;
-  height: 45vh;
-  min-height: 50vw;
 }
 
 .recipe-image {
@@ -335,7 +333,6 @@ span.terms {
 }
 @media only screen and (min-width: 600px) {
 .recipe-header {
-    height: 55vh;
     margin-top: 50px;
   }
   .recipe-header .recipe-name {
@@ -385,10 +382,5 @@ display: block;
 .recipe-info-box button {
   height: 70px;
   margin-left: -3%;
-}
-}
-
-@media only screen and (min-width: 910px) {
-.recipe-info-box {
 }
 }
